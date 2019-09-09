@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[JavaScript实现轮播图：001]]></title>
-    <url>%2F2019%2F04%2F24%2FJavaScript%E5%AE%9E%E7%8E%B0%E8%BD%AE%E6%92%AD%E5%9B%BE%EF%BC%9A001%2F</url>
-    <content type="text"><![CDATA[首先我们来看一下这个小案例的最终效果： 一.事先准备好我们的素材 四张1200*460像素的图片素材 作为上一张下一张按钮的箭头小图标一个 二.代码步骤1.创建一个class与id均命名为”main”的div盒子这个main盒子作为整个轮播图的总容器，图片、按钮、导航等元素均包含在main盒子里面 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;轮播图&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div class="main" id="main"&gt; &lt;/div&gt; &lt;/body&gt;&lt;/html&gt; 2.在main盒子中创建一个class=”banner” id=”banner”的div盒子这个盒子用来展示轮播的图片，此处我们以展示4张图片为例]]></content>
-      <categories>
-        <category>前端工程师</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>轮播图</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[零基础学高数017：不定积分003]]></title>
     <url>%2F2019%2F04%2F21%2F%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6%E9%AB%98%E6%95%B0017%EF%BC%9A%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86003%2F</url>
     <content type="text"><![CDATA[1.有理函数的积分（数三不考） 2.简单无理函数的积分 3.,三角有理式的积分]]></content>
@@ -91,41 +78,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[C语言中常量、常变量、符号常量的区别]]></title>
-    <url>%2F2019%2F03%2F26%2FC%E8%AF%AD%E8%A8%80%E4%B8%AD%E5%B8%B8%E9%87%8F%E3%80%81%E5%B8%B8%E5%8F%98%E9%87%8F%E3%80%81%E7%AC%A6%E5%8F%B7%E5%B8%B8%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
-    <content type="text"><![CDATA[常量普通常量在程序运行过程中，其值不能被改变的量称为常量，如整型常量：1,2,3…;实型常量:123.456 , 0.345 , -1.2 , 0.0…;字符常量：如’a’ , ‘Z’ ,’\n’ ,’\t’… 符号常量用#define指令，指定一个符号名称代表一个常量，如：#define PI 3.1416 (注意行末没有分号) 常变量如:const int a=3; 表示a被定义为一个整型变量，指定其值为3，并且在变量存在期间其值不能被改变。 常变量与常量的异同：常变量具有变量的基本属性：有类型，占存储单元，只是不允许改变其值，可以说，常变量是有名字的不变量，而常量是没有名字的不变量。 常变量与符号常量的不同： #define PI 3.1415926 const flost pi=3.1415926;]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Java中，&&与&，||与|的区别]]></title>
-    <url>%2F2019%2F03%2F20%2FJava%E4%B8%AD%EF%BC%8C%26%26%E4%B8%8E%26%EF%BC%8C%E4%B8%8E%E7%9A%84%E5%8C%BA%E5%88%AB%2F</url>
-    <content type="text"><![CDATA[在Java的逻辑运算符中，有这么四类：&amp;&amp;（短路与），&amp;，|，||（短路或）。 &amp;&amp;和&amp;都是表示与，区别是&amp;&amp;只要第一个条件不满足，后面条件就不再判断。而&amp;要对所有的条件都进行判断。看下面的程序： public static void main(String[] args) {​ // TODO Auto-generated method stub​ if((23!=23)&amp;&amp;(100/0==0)){​ System.out.println(“运算没有问题。”);​ }else{​ System.out.println(“没有报错”);​ }​ } 输出的是“没有报错”。而将&amp;&amp;改为&amp;就会如下错误：Exception in thread “main” java.lang.ArithmeticException: / by zero 原因是：&amp;&amp;时判断第一个条件为false，后面的100/0==0这个条件就没有进行判断。​ &amp;时要对所有的条件进行判断，所以会对后面的条件进行判断，所以会报错。 ||和|都是表示“或”，区别是||只要满足第一个条件，后面的条件就不再判断，而|要对所有的条件进行判断。看下面的程序： public static void main(String[] args) {​ // TODO Auto-generated method stub​ if((23==23)||(100/0==0)){​ System.out.println(“运算没有问题。”);​ }else{​ System.out.println(“没有报错”);​ }​ } 此时输出“运算没有问题”。若将||改为|则会报错。 原因是：||判断第一个条件为true，后面的条件就没有进行判断就执行了括号中的代码，而|要对所有的条件进行判断， 所以会报错。原文：https://blog.csdn.net/lishiyuzuji/article/details/8116516 第六届蓝桥杯JavaB组题目1： java中提供了对正则表达式的支持。有的时候，恰当地使用正则，可以让我们的工作事半功倍！ 如下代码用来检验一个四则运算式中数据项的数目，请填写划线部分缺少的代码。 注意：只填写缺少代码，不要写任何多余内容，例如，已有的双引号。 public class A{​ public static int f(String s)​ {​ return s.split(“____“).length;​ }public static void main(String[] args){​ System.out.println(f(“12+355-218/9-3”)); //7​ System.out.println(f(“35412+3-14/76”)); //6} } 答案： \\+|\\-|\\*|\\/ 我的答案： \\D 输出结果均为： 7 6]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>蓝桥杯</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[JavaScript之DOM基础]]></title>
-    <url>%2F2019%2F03%2F19%2FJavaScript%E4%B8%AD%E7%9A%84DOM%2F</url>
-    <content type="text"><![CDATA[什么是DOM1.理解DOM： DOM（Document Object Model ，文档对象模型）一种独立于语言，用于操作xml，html文档的应用编程接口。 怎么说，我从两个角度理解： 对于JavaScript，为了能够使JavaScript操作Html，JavaScript就有了一套自己的dom编程接口。 对于Html，dom使得html形成一棵dom树，类似于一颗家族树一样，一层接一层，子子孙孙。 所以说，有了DOM，在我看来就是相当于JavaScript拿到了钥匙一样可以去操作Html的每一个节点，触摸Html每寸肌肤。（咳。。。） 2.介绍Html的DOM树：说明：html标签通过浏览器的解析后才会形成dom树，此后HTML中的每个标签元素，属性，文本都能看做是一个DOM的节点，JavaScript都能通过dom的提供的编程接口操作到每个节点，去了解浏览器的渲染机制能够帮助我们了解dom。 认识JavaScript中的DOM编程接口上面说了html形成的dom树，接着说下通过js的dom编程接口去操作这棵dom树。 JavaScriptDOM操作的常用方法和属性：: 常用方法： 获取节点： document.getElementById(idName) //通过id号来获取元素，返回一个元素对象 document.getElementsByName(name) //通过name属性获取id号，返回元素对象数组 document.getElementsByClassName(className) //通过class来获取元素，返回元素对象数组（ie8以上才有） document.getElementsByTagName(tagName) //通过标签名获取元素，返回元素对象数组 获取/设置元素的属性值： element.getAttribute(attributeName) //括号传入属性名，返回对应属性的属性值[注意：此方法可获取元素除class属性以外的所有属性，包括HTML自带属性与用户自定义属性，获取class属性通过ele.className获取] element.setAttribute(attributeName,attributeValue) //传入属性名及设置的值 创建节点Node： document.createElement(“h3”) //创建一个html元素，这里以创建h3元素为例 document.createTextNode(String); //创建一个文本节点； document.createAttribute(“class”); //创建一个属性节点，这里以创建class属性为例 增添节点： element.appendChild(Node); //往element内部最后面添加一个节点，参数是节点类型 elelment.insertBefore(newNode,existingNode); //在element内部的中在existingNode前面插入newNode 删除节点： element.removeChild(Node) //删除当前节点下指定的子节点，删除成功返回该被删除的节点，否则返回null 常用属性 获取当前元素的父节点 ： element.parentNode //返回当前元素的父节点对象 获取当前元素的子节点： element.chlidren //返回当前元素所有子元素节点对象，只返回HTML节点 element.chilidNodes //返回当前元素多有子节点，包括文本，HTML，属性节点。（回车也会当做一个节点） element.firstChild //返回当前元素的第一个子节点对象 element.lastChild //返回当前元素的最后一个子节点对象 获取当前元素的同级元素： element.nextSibling //返回当前元素的下一个同级元素 没有就返回null element.previousSibling //返回当前元素上一个同级元素 没有就返回null 获取当前元素的文本： element.innerHTML //返回元素的所有文本，包括html代码[注意：若采用的是ele.innerHTML=”XXX”的形式，则表示设置ele元素开始和结束标签之间的HTML内容为XXX] element.innerText //返回当前元素的自身及子代所有文本值，只是文本内容，不包括html代码 获取当前节点的节点类型：node.nodeType //返回节点的类型,数字形式（1-12）常见几个1：元素节点，2：属性节点，3：文本节点。 设置样式：element.style.color=“#eea”; //设置元素的样式时使用style，这里以设置文字颜色为例，注意styleName不能使用“-”连字符形式而应改为驼峰命名形式，如font-size应该改为fontSize 获取当前元素的clss属性：element.className //返回当前元素的class属性[注意：若采用的是ele.className =”XXX”的形式，则表示设置ele元素的class属性为XXX] 参考：http://www.cnblogs.com/Ry-yuan/p/6918155.html]]></content>
-      <categories>
-        <category>前端工程师</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[质数的判断]]></title>
     <url>%2F2019%2F03%2F19%2F%E8%B4%A8%E6%95%B0%2F</url>
     <content type="text"><![CDATA[判断一个数是不是质数代码Java代码： import java.util.Scanner;public class Main&#123; public static void main(String[] args)&#123; Scanner cin=new Scanner(System.in); int n=cin.nextInt(); System.out.println(isPrime(n)); &#125; private static boolean isPrime(int n)&#123; boolean flag=true; for(int i=2;i*i&lt;=n;i++)&#123; if(n%i==0)&#123; flag=false; &#125; &#125; return flag; &#125; &#125; C语言代码： #include&lt;stdio.h&gt;int main()&#123; int isPrime(int); int n,flag; scanf("%d",&amp;n); flag=isPrime(n); if(flag==1) &#123; printf("%d is Prime\n",n); &#125;else &#123; printf("%d is Not Prime\n",n); &#125; &#125;int isPrime(int n)&#123; int flag=1; int i; for(i=2;i*i&lt;=n;i++) &#123; if(n%i==0) &#123; flag=-1; &#125; &#125; return flag;&#125; [注]：好久没写过C了，都忘了怎么写了，都忘了C语言中没有布尔型变量…… 讲解[关于i*i&lt;=n的讲解]：要判断n是否为质数，就从2一直尝试到n-1的做法效率是最差的！ 其实只要从2一直尝试到根号n，就可以了。因为因数都是成对出现的。比如，100的因数有：1和100，2和50，4和25，5和20，10和10。看出来没有？成对的因数，其中一个必然小于等于100的开平方，另一个大于等于100的开平方。 输出≤n(n≤10000000)的质数的个数代码Java代码 import java.util.Scanner;public class Main&#123; public static void main(String[] args)&#123; Scanner cin=new Scanner(System.in); int n=cin.nextInt(); System.out.println(fun(n)); &#125; private static int fun(int n)&#123; boolean[] flag=new boolean[n+1]; int count=0,num=2; while(num&lt;=n)&#123; if(flag[num]==false)&#123; for(int i=num*2;i&lt;=n;i+=num)&#123; flag[i]=true; &#125; count++; &#125; num++; &#125; return count; &#125;&#125; 讲解[筛法]：首先，2是公认最小的质数，所以，先把所有2的倍数去掉；然后剩下的那些大于2的数里面，最小的是3，所以3也是质数；然后把所有3的倍数都去掉，剩下的那些大于3的数里面，最小的是5，所以5也是质数……上述过程不断重复，就可以把某个范围内的合数全都除去（就像被筛子筛掉一样），剩下的就是质数了。而筛选这一步骤通过构造一个定长的布尔型容器（通常用数组）来实现，分别表示2~n的标志，若是非质数，则设为true，若是质数，则保持原状态false，最后2~n中标志为false的就全部是质数了 。]]></content>
@@ -134,18 +86,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[JavaScript中的String]]></title>
-    <url>%2F2019%2F03%2F17%2FJavaScript%E4%B8%AD%E7%9A%84String%2F</url>
-    <content type="text"><![CDATA[String的基本方法 charAt(index):返回字符串中index位置的字符 charCodeAt(index):返回字符串中index位置的字符的编码 indexOf(char)：从头检索返回字符char在字符串中首次出现的位置，char也可以是子字符串，若没有则返回-1 lastIndexOf(cgar)：从尾部检索返回字符char在字符串中最后一次出现的位置，char也可以是子字符串，若没有则返回-1 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var str="ifyoucansayHELLOJS"; var index1=str.lastIndexOf("O");//15 var index2=str.lastIndexOf("HELLO");//11(即子串“HELLO”的首字符H的位置) console.log(index1); console.log(index2); &lt;/script&gt; &lt;/body&gt; 输出结果： 字符串的截取方法1.slice()语法：stringObject.slice(start,end) 功能：截取子字符串 参数说明：①start:必需，指定子字符串的开始位置②end:可选，表示子字符串到哪里结束，end本身不在截取范围之内，省略时截取至字符串的末尾③当参数为负数时，会将传入的负值与字符串的长度相加 返回值：截取的子字符串 [注]：和数组的slice()方法没什么区别 2.substring()[说明]:语法功能同slice()完全一样 [区别]: 当参数为负数时，自动将参数转换为0 substring()会自动将较小的数作为开始位置，将较大的数作为结束位置 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var str="123456789"; console.log(str.slice(-5,7));//相当于(4,7) console.log(str.substring(-5,7));//相当于(0,7) console.log(str.substring(-4,-7));//相当于(0,0),不截取，返回空字符串 console.log(str.substring(2,-3));//substring()会自动将较小的数作为开始位置，将较大的数作为结束位置 &lt;/script&gt; &lt;/body&gt; 输出结果： 3.substr()语法：stringObject.slice(start,length) 功能：截取子字符串 参数说明：①start:必需，指定子字符串的开始位置②length:可选，表示截取的字符总数，省略时截取至字符串的末尾③当参数为负数时，会将传入的负值与字符串的长度相加④当length为负数时，返回空字符串 返回值：截取的子字符串 String的其他两个方法1.split()语法：stringObject.split(separator) 功能：把一个字符串分割成字符串数组 参数说明：separator–必需，分隔符 返回值：数组 2.replace()语法：stringObject.split(regexp/substr,replacement) 功能：replace() 方法用于在字符串中用一些字符替换另一些字符，或替换一个与正则表达式匹配的子串。 参数说明：①regexp:必需，规定子字符串或要替换的模式的RegExp对象②replacement:必需。一个字符串值。规定了替换文本或生成替换文本的函数。 返回值：String &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var str = "123-456-789"; var newStr1 = str.replace(/-/, ','); var newStr2 = str.replace(/-/g, ','); console.log(newStr1); console.log(newStr2); &lt;/script&gt; &lt;/body&gt; 输出结果： 3.toUpperCase()语法：stringObject.toUpperCase() 功能：把字符串转为大写 4.toLowerCase()语法：stringObject.toLowerCase() 功能：把字符串转为小写 [小练习]:将”border-left-color”变成驼峰命名”borderLeftColor” &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; function fun(str) &#123; var arr = str.split('-'), newStr = arr[0]; for(var i = 1, len = arr.length; i &lt; len; i++) &#123; var word = arr[i]; newStr += word.charAt(0).toUpperCase() + word.substr(1); &#125; &#125; fun("border-left-color"); &lt;/script&gt; &lt;/body&gt;]]></content>
-      <categories>
-        <category>前端工程师</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -175,18 +115,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[JavaScript中的数组]]></title>
-    <url>%2F2019%2F03%2F16%2FJavaScript%E4%B8%AD%E7%9A%84%E6%95%B0%E7%BB%84%2F</url>
-    <content type="text"><![CDATA[【注】：JavaScript中的数组与其他常见编程语言中的数组有所区别，它可以自动扩容，可以存储任意类型的数据元素，更像是Java’中的List集合。** 创建数组： 1.var a=new Array() &lt;括号内可以指定数组的容量大小，也可以不指定&gt; ２.var a=[ele1,ele2,…eleX] 数组的栈方法：1.push()语法：arrayObject.push(newele1,newele2,…,newX) 功能：把括号内的参数顺序添加到数组arrayObject的尾部 返回值：参数添加完成后数组的新长度 2.unshift()语法：arrayObject.unshift(newele1,newele2,…,newX) 功能：把括号内的参数添加到数组arrayObject的尾部开头 返回值：参数添加完成后数组的新长度 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var a = [797, "slashyouth", true]; var newLen = a.unshift("hello", 1997); console.log(newLen); console.log(a); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 输出结果： 3.pop()语法：arrayObject.pop() 功能：删除数组arrayObject的最后一个元素 返回值：被删除的那个元素 4.shift()语法：arrayObject.shift() 功能：删除数组arrayObject的第一个元素 返回值：被删除的那个元素 数组的转换方法1.join()语法：arrayObject.join(separator) separator：分隔符 功能：用于把数组中的所有元素放入一个字符串(就是将数组转为字符串) 返回值：字符串 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var a = [797, "slashyouth", true]; var str1 = a.join(); //不含参数，默认分隔符为逗号 console.log(str1); var str2 = a.join("-"); console.log(str2); var str3 = a.join(""); console.log(str3); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 输出结果： 2.reverse()语法：arrayObject.reverse() 功能：用于颠倒数组中元素的顺序 返回值：反序后的数组 3.sort()语法：arrayObject.sort(sortby) 功能：用于对数组中的元素进行排序 返回值：排序后的数组 说明： 1.即使数组中的每一项都是数值，sort()方法仍会将元素先转为字符串，再对转换后的字符串进行比较并排序 2.sort()方法可以接收一个比较函数作为参数 &lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var a = [12,5,8,10,2]; var num1=a.sort(); console.log(num1);//输出结果是[10, 12, 2, 5, 8]，并非[2, 5, 8, 10, 12]，因为会先转为字符串进行比较：先比较高位，高位相同再比较低位 var num2=a.sort(function (a,b)&#123;return a-b;&#125;);//降序 console.log(num2); var num3=a.sort(function (a,b)&#123;return b-a;&#125;);//升序 console.log(num3); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 输出结果： 4.concat()语法：arrayObject.concat(array1,array2,…arrayX) 功能：用于连接两个或多个数组 返回值：连接后的新数组 &lt;!DOCTYPE html&gt;&lt;html lang="en"&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var a1 = [12,5,8,10,2]; var a2=["a","b","c"]; var a3=[true,false]; var newArray=a1.concat(a2,a3); console.log(newArray); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 输出结果： 5.slice()语法：arrayObject.slice(start,end) 功能：从已有数组中返回选定的数组 返回值：数组 start（必需）：规定从何处开始选取，如果是负数，从数组尾部开始算起 end（可选）：规定从何处结束选取，是数组片断结束处的数组下标 [注]：arrayObject.slice(start,end)→[start,end)左闭右开 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var color = ["red", "orange", "yellow", "green", "blue", "white", "pink", "balck"]; var newColor = color.slice(2, 5); //左闭右开，选取下标为2、3、4的元素，新数组为：["yellow","green","blue"] console.log(newColor); var newArr = color.slice(-3, 7);//start为负数：从数组尾部开始算起；若start&lt;0,也可用数组长度length-start替换start，效果一样 console.log(newArr); &lt;/script&gt; &lt;/body&gt; 输出结果： 强大的splice()方法1.使用splice()方法删除数组项语法：arrayObject.splice(index,count) 功能：删除从index处开始的零个或多个元素 返回值：含有被删除的元素的数组 说明：index为从哪个下标开始删除；count表示删除多少个元素，若count设为0，则不会删除项目，若不设置count，则删除从index-末尾的所有元素 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var color = ["red", "orange", "yellow", "green", "blue", "white", "pink", "balck"]; var arr = color.splice(2, 2); //删除掉color数组中的"yellow", "green" console.log(color); console.log(arr); &lt;/script&gt; &lt;/body&gt; 输出结果： 2.使用splice()方法插入数组项语法：arrayObject.splice(index,0,item1,item2…itemX) 功能：再指定位置插入值 返回值：空数组 index:要从哪个位置开始插入 0:要删除的项数 item1…itemX:要插入的项 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var color = ["red", "orange", "yellow", "green", "blue", "white", "pink", "balck"]; var arr = color.splice(2, 0,"HELLO","JAVASCRIPT"); console.log(color); console.log(arr); &lt;/script&gt; &lt;/body&gt; 输出结果： 3.使用splice()方法替换数组项语法：arrayObject.splice(index,count,item1,item2…itemX) 功能：在指定位置插入值，且同时删除任意数量的项 返回值：从原始数组删除的项，若没有删除任何项则返回空数组 index:起始位置 0:要删除的项数 item1…itemX:要插入的项 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var color = ["red", "orange", "yellow", "green", "blue", "white", "pink", "balck"]; var arr = color.splice(2, 2,"AAAAAAAAAAAA","BBBBBBBBBBB","CCCCCCCCCCCCC"); console.log(color); console.log(arr); &lt;/script&gt; &lt;/body&gt; 输出结果：]]></content>
-      <categories>
-        <category>前端工程师</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[零基础学高数014：曲率渐近线]]></title>
     <url>%2F2019%2F03%2F16%2F%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6%E9%AB%98%E6%95%B0014%EF%BC%9A%E6%9B%B2%E7%8E%87%E6%B8%90%E8%BF%91%E7%BA%BF%2F</url>
     <content type="text"><![CDATA[这一节数一数二考查较多，尤其是数二 曲率及曲率半径（数三不考） 渐近线例题：]]></content>
@@ -198,18 +126,6 @@
         <tag>高等数学</tag>
         <tag>考研复习</tag>
         <tag>高昆轮</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[JavaScript的逻辑操作符]]></title>
-    <url>%2F2019%2F03%2F15%2FJavaScript%E7%9A%84%E9%80%BB%E8%BE%91%E6%93%8D%E4%BD%9C%E7%AC%A6%2F</url>
-    <content type="text"><![CDATA[逻辑操作符： &amp;&amp;:与 ||：或 !：非 &amp;&amp;:只要有一个条件不成立，返回false&lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var num1 = 10, num2 = 20, num3 = 30, str = "welcome", bool = false, n = null, m; console.log(num1 &lt; num2 &amp;&amp; num2 &lt; num3); console.log(num1 &lt; num2 &amp;&amp; num2 == num3); console.log(num2 &lt; num3 &amp;&amp; num3 &gt; num1 &amp;&amp; bool); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 输出结果： 说明：&amp;&amp;不仅能操作布尔值，还能操作任意一种类型的数据,在有一个操作数不是布尔值的情况，&amp;&amp;操作就不一定返回值，此时它遵循下列规则： 如果第一个操作数隐式类型转换后为true，则返回第二个操作数 如果第一个操作数隐式类型转换后为false，则返回第一个操作数 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var num1 = 10, num2 = 20, num3 = 30, str = "welcome", bool = false, n = null, m; console.log(str &amp;&amp; num3); //str隐式转型后为true，则返回num3的值，即30 console.log("hello" &amp;&amp; num1 &amp;&amp; "result"); //"hello"与num1隐式转型之后都为true，返回后一位的值，即"result" //以下 若第一个操作数隐式转型后为false（0与""隐式转型都为false），则返回第一个操作数 console.log(0 &amp;&amp; str); console.log("" &amp;&amp; str); console.log(0 &amp;&amp; "" &amp;&amp; str); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 输出结果： 注：操作符中只需出现一个nul，则返回结果必为null 操作符中只需出现一个NaN，则返回结果必为NaN 操作符中只需出现一个undefined，则返回结果必为undefined 操作符中若同时出现null、NaN、undefined中的多个，则返回三者最先出现的 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var num1 = 10, num2 = 20, num3 = 30, str = "welcome", bool = false, n = null, m; console.log((1-str)&amp;&amp; num1); console.log(n&amp;&amp; str); console.log(m&amp;&amp; num1&lt;num2); console.log(null&amp;&amp;NAN&amp;&amp;str); console.log(m&amp;&amp;null&amp;&amp;NAN); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 输出结果： ||:只要有一个条件成立，返回true说明：||不仅能操作布尔值，还能操作任意一种类型的数据,在有一个操作数不是布尔值的情况，&amp;&amp;操作就不一定返回值，此时它遵循下列规则： 如果两个操作数都是null，则返回null 如果两个操作数都是NaN，则返回NaN 如果两个操作数都是undefined,则返回undefined &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; var m; console.log(123 || 0);//123为true，直接返回123，不继续往后进行判读 console.log("hello" || "");//"hello"为true，直接返回"hello"，不继续往后进行判读 console.log("" || "hello");//""为false，继续往后判读，"hello"为true，返回"hello" console.log((1 - "hello") || "" || "JavaScript");//(1 - "hello") 和 ""都为false，继续判断，返回"JavaScript" //||：一直往下判断，若判断到某个操作数为true，则返回该操作数的值，若判断到最后一个操作数仍为false或null或NaN或undefined，那么则返回false或null或NaN或undefined console.log(m || NaN || null); console.log(null || m || NaN); console.log(NaN || null || m); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 輸出結果： ||总结：一直往下判断，若判断到某个操作数为true，则返回该操作数的值，若判断到最后一个操作数仍为false或null或NaN或undefined，那么则返回false或null或NaN或undefined !:说明： 无论操作数是什么数据类型，逻辑非都会返回一个布尔值 !!同时使用两个逻辑非时：&lt;相当于负负得正的意思&gt; 第一个逻辑非操作会基于无论操作数是什么数据类型，都会返回一个布尔值 第二个逻辑非则对上一步所得布尔值取反 &lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;script&gt; console.log(!false); console.log(!9); console.log(!"hello"); console.log(!""); console.log(!NaN); console.log(!null); console.log(!!true); &lt;/script&gt; &lt;/body&gt;&lt;/html&gt; 输出结果：]]></content>
-      <categories>
-        <category>前端工程师</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
       </tags>
   </entry>
   <entry>
@@ -372,17 +288,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[C/S与B/S之争]]></title>
-    <url>%2F2019%2F03%2F02%2FCS%E4%B8%8EBS%E4%B9%8B%E4%BA%89%2F</url>
-    <content type="text"><![CDATA[C/S架构: 所谓C/S架构，就是客户端/服务端的架构形式。 传统的Web应用程序开发模式，需要同时开发客户端和服务端的程序。由服务端的程序提供基本的服务，客户端是提供给用户的访问接口，用户可以通过客户端的软件访问服务器提供的服务。 在这种架构方式中，多个客户端围绕着一个或多个服务器，这些客户端安装在客户机上，负责用户业务逻辑的处理，在服务器端仅仅对重要的过程和数据库进行处理和存储，每个服务器都分担这服务器的压力，这些客户端可以根据不同的用户的需求来进行定制。 C/S弊端： 在C/S架构中，系统部署的时候需要在每个用户的机器上安装客户端，这样的处理方式带来很大的工作量，而且在C/S架构中，软件的升级也是很麻烦的一件事情，哪怕是再小的一点改动，都得把所有的客户端全部修改更新。这些致命的弱点决定了C/S结构的命运。在C/S架构模式流行一段时间以后，逐渐被另一种Web应用系统的架构方式所代替。这种新的Web软件架构的模式就是B/S。 B/S架构： 所谓B/S架构，就是浏览器/服务器的架构形式。 在B/S架构的开发模式中，客户端就是简单的浏览器程序，可以通过HTTP协议访问服务器端的应用，在服务端，与通信相关的处理都由服务器软件负责，这些服务器软件都是由第三方的软件厂商提供。开发人员只需要把功能代码部署在Web服务器中，客户端就可以通过浏览器访问到这些功能代码，从而实现向客户提供的服务。B/S架构就是浏览器/服务器的架构形式。 在这种架构方式中，采取了基于浏览器的策略，简化了客户端的开发工作。在B/S架构的客户机中，不用安装客户端软件，只要有通用的浏览器工具，就可以访问服务器端提供的服务。在各种操作系统中，都提供了浏览器工具，这些浏览器工具都是遵循着相同的协议规范，所以B/S结构的客户端在各种系统环境中都已经实现。而且，在浏览器访问服务器的过程中，使用的是HTTP协议，所以这种方式非常容易就可以穿过防火墙的限制。而且在B/S结构的服务器端，也不用处理通信相关的问题。这些问题都由Web服务器提供，Web服务器处理用户的HTTP请求，开发人员只需要专注开发业务逻辑功能即可。总之，Web服务器完成了底层的操作，给应用软件的开发提供了基础的通信服务，从而减轻了开发人员重复开发通信相关的功能，从而提高了开发的效率，降低了B/S结构应用程序开发的难度。 B/S缺点： B/S架构也有自身的一些缺点，例如界面元素单调。在B/S结构的程序中，失去了桌面应用程序丰富的用户界面，程序在交互性上没有C/S架构那么人性化。 在C/S和B/S两种架构之间，并没有严格的界限，两种架构没有好坏之分，使用这两种架构都可以实现系统的功能。开发人员可以根据实际的需要进行选择。例如需要丰富的用户体验，那就选择C/S架构。在目前的网络游戏中，基本都是选择C/S架构。如果更偏重的是功能服务方面的实现，就需要选择B/S架构，这也正是目前绝大部分管理应用系统采用的软件架构方法。]]></content>
-      <categories>
-        <category>JavaWeb学习</category>
-      </categories>
-      <tags>
-        <tag>C/S与B/S</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[零基础学高数008：导数与微分的定义]]></title>
     <url>%2F2019%2F03%2F02%2F%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6%E9%AB%98%E6%95%B0008%EF%BC%9A%E5%AF%BC%E6%95%B0%E4%B8%8E%E5%BE%AE%E5%88%86%E7%9A%84%E5%AE%9A%E4%B9%89%2F</url>
     <content type="text"><![CDATA[1.导数的定义 2.导数的几何意义 3.微分的定义 4.微分的几何意义 5.连续、可导、可微的关系 例题例题1： 拓展训练: 例题2： 例题3： 例题4： 例题5： 由例题5可得出以下结论：]]></content>
@@ -529,17 +434,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[开学愉快：返程]]></title>
-    <url>%2F2019%2F02%2F22%2F%E5%BC%80%E5%AD%A6%E6%84%89%E5%BF%AB%EF%BC%9A%E8%BF%94%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[视频如下：]]></content>
-      <categories>
-        <category>杂文随笔</category>
-      </categories>
-      <tags>
-        <tag>视频</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[经典递归问题：求两个字符串的最长公共子序列的长度]]></title>
     <url>%2F2019%2F02%2F17%2F%E7%BB%8F%E5%85%B8%E9%80%92%E5%BD%92%E9%97%AE%E9%A2%98%EF%BC%9A%E6%B1%82%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97%E7%9A%84%E9%95%BF%E5%BA%A6%2F</url>
     <content type="text"><![CDATA[公共子序列与公共子串的区别 公共子序列是在整个字符串中只要按照顺序可以不用连续的，但是公共子串是指必须连续的字符串，举个例子: ABCBDABBDCABA 最长公共子序列是 : BCBA 最长公共字串是 : AB 递归【思路】： 先将两个字符串的第一个字符进行比较： 两串的第一个字符相同：再将两字符串剩余子串进行继续比较 两串的第一个字符不同：①.将串1的剩余子串与串2整串进行比较；②.将串2的剩余子串与串1整串进行比较→①和②中的较大者即为最大公共子序列长度 public class Main &#123; public static void main(String[] args)&#123; int len=f("viced","viecddh"); System.out.println(len); &#125; private static int f(String s1, String s2) &#123; if(s1.length()==0||s2.length()==0)&#123;//当某一字符串长度为0时表示其中一个字符串比较完毕 return 0; &#125; if(s1.charAt(0)==s2.charAt(0))&#123;//第一个字符相同 return f(s1.substring(1),s2.substring(1))+1; &#125;else&#123;//第一个字符不同 return Math.max(f(s1.substring(1),s2),f(s1,s2.substring(1))); &#125; &#125; 动态规划当所比较的两个字符串非常长时，采用递归重复的子问题多，效率低下，求解很容易发生栈溢出，改进的办法——用空间换时间，用数组保存中间状态，方便后面的计算。这就是动态规划（DP)的核心思想了。 public class Main &#123; public static void main(String[] args)&#123; int len=f("viceddgbgfhb","viecddhjnghjghjgjgh"); System.out.println(len); &#125; private static int f(String str1, String str2) &#123; int len1 = str1.length(); int len2 = str2.length(); int c[][] = new int[len1+1][len2+1]; for (int i = 0; i &lt;= len1; i++) &#123; for( int j = 0; j &lt;= len2; j++) &#123; if(i == 0 || j == 0) &#123; c[i][j] = 0; &#125; else if (str1.charAt(i-1) == str2.charAt(j-1)) &#123; c[i][j] = c[i-1][j-1] + 1; &#125; else &#123; c[i][j] = Math.max(c[i - 1][j], c[i][j - 1]); &#125; &#125; &#125; return c[len1][len2]; &#125;&#125; 参考：https://blog.csdn.net/qq_31881469/article/details/77892324]]></content>
@@ -593,17 +487,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[不要自称为程序员]]></title>
-    <url>%2F2019%2F02%2F12%2F%E4%B8%8D%E8%A6%81%E8%87%AA%E7%A7%B0%E4%B8%BA%E7%A8%8B%E5%BA%8F%E5%91%98%2F</url>
-    <content type="text"><![CDATA[转自: 开发者技术前线 每年都有无数年轻程序员，加入软件行业。他们在学校 里学 过 编程，但是对这行业的现实一无所知，现在来听听资 深 的软件工程师，介绍这个行业的一些实际情况 。 一 、 90% 的 编 程 工 作 来 自 内 部 软 件 计算机专业的学生，可能有一种错觉，觉得大部分程序员，都在编写公开出售的软件或者通用软件。 这种看法是不对的。大部分程序员，实际上编写的是不公开的企业内部软件，比如追踪费用的软件、优化装运成本的软件、帮助记账的软件、设计新部件的软件、计算保单价格的软件、识别恶意订单的软件等等。 各种各样的商业公司，开发内部软件，解决它们自己的问题。市场上对程序员的大部分需求来源于此，只有极少数程序员直接编写面向外部顾客的软件。 内部软件的开发，通常非常乏味，令人厌倦。因为它们的技术复杂性低、技术决策非常保守、预算很少、缺乏长远考虑。但是，世界上大部分编程工作都是这种。你如果想入行程序员，你就要有心理准备去接受这样的工作。 二、别人雇你的目的，是让你创造利润，不是让你编程 商业公司最关心的（或者说唯一在乎的）事情，就是增加收入、降低成本。因此，它们实际上需要的不是程序员，而是能够帮助它们增加收入、降低成本的人。 开发优美的软件，解决技术难题，编写没有 bug 的代码，这些都不是商业公司的目的。它们雇佣你，是为了让你帮它们完成某个可以增加收入、降低成本的项目，而不是为了让你追求个人的软件成就。 你对于公司的唯一价值，就在于能多大程度上为它们增加收入、降低成本。 三、好的程序员专注于为公司带来价值 很多公司的经理不懂计算机，在他们心目中，程序员就是一群高成本的劳动力，只会在一台复杂的机器上干一些难懂的事情。 如果你自称为”码农”，只会写代码。当公司需要压缩成本的时候，某些经理首先就会想到解雇你，因为你的工资高。 有一家公司叫 Salesforce，口号是”没有软件”，意思就是如果经理们购买了他们的服务，就不再需要别的软件管理销售业务了，也就是说，不再需要自己雇佣程序员了。 正确的做法是，你应该把自己描述成与增加收入、降低成本有关系的人，比如”xx产品的开发者”或”改进者”。有一个 Google Adsense 程序员的自我介绍，是这样写的：”Google 公司97%的收入，与我的代码有关。 四、不要限定自己 年轻学生经常会问，应该选择哪种语言或平台？Java 是不是比 .NET 容易找工作？ 过分强调某一种语言或平台，都是不必要的。如果你把自己限定为 Java 程序员或 .NET 程序员，你就已经输了，因为首先你不应该自称为程序员（理由见上一点），其次这种限定使得你自动被排除在世界上大多数编程工作之外。 现实生活中，学会一种新语言，只需要一两个月，然后再过半年到一年，你就会变成老手。那时，根本没人在乎你以前用什么语言。 天才程序员是很少的，可是需要天才程序员的工作机会却很多很多，大多数场合都是需求远远大于供给。 这意味着，即使你不是天才程序员，只要你是一个优秀工程师，那些招聘公司也会立刻录用你，因为它们知道招聘到天才程序员的机会微乎其微。（重复一遍，所谓”优秀工程师”，就是你的履历上有一连串可以为公司增加收入、降低成本的记录。） 某些公司的人事部门，会根据某个关键词（比如 Java 或 .NET）过滤简历。虽然这样的公司根本不值得去，但是如果你真的想过这一关，也很容易：投入几个晚上和周末，在你当前的项目中设法用到这个关键词，然后再把它写进简历就行了。 五、如何提高求职时的谈判能力？ （1）记住你不是在求职，不是在展示编程技巧，而是在推销某种商业问题（增加收入或降低成本）的解决方案。 （2）面试时，要有自信，要平等的对话。你要的是一个互利的录用合同，不要每次对方提出要求，你都说Yes。 （3）雇主可能会问”你的上一份工资是多少”，他们其实在说”给我一个理由，压低你的报酬”。你要想好如何适当地回答这个问题。 （4）要还价。这里不仅仅指钱，还指其它你关心的方面。如果你无法要求更高的薪水，那就试着要求更多的假期。 六、创业公司是否适合应届毕业生？ 如果你一毕业就加入创业公司，最可能的结果是，接下来几年你都工作得非常辛苦，然后公司悲惨地失败了，你失业了，不得不又去另一家创业公司工作。 如果你真的想去创业公司，应该首先找一家大公司干上两年，攒一点钱，积累一些经验，然后精心挑选一家创业公司，再去实现自己的梦想。 在创业公司工作，一般情况下，你遇到的都是创业者。他们大多数人没有能力在两年后雇佣你；而在大公司工作，你遇到的都是其他大公司的人，他们中很多人将来有能力雇用你或者帮你介绍工作。 七、沟通技能是最重要的职业技能 前面说过，工程师被雇佣，不是因为会编程，而是因为能够创造商业价值。所以，你得让人们相信你能创造价值，这是帮助你找到工作的最重要的能力。这种能力与你真的能创造多少价值，实际上联系不是很紧密。很多情况下，你向别人展示的是对你能力的一种期望，而不是你当前的能力。]]></content>
-      <categories>
-        <category>杂文随笔</category>
-      </categories>
-      <tags>
-        <tag>经验</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[动态规划：斐波那契数列]]></title>
     <url>%2F2019%2F02%2F09%2F%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%EF%BC%9A%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97%2F</url>
     <content type="text"><![CDATA[问： 大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。n&lt;=39 斐波那契数列简单介绍 我的解法： public static int Fibonacci(int n) &#123; if(n &lt;= 1)&#123; return n; &#125; return Fibonacci(n-1)+Fibonacci(n-2); &#125; 注：从Fibonacci(n-1)+Fibonacci(n-2)明显看出使用的是递归，此题用递归两三行代码即可搞定。但是，若出题者准备着一个超大的n，那么很有可能会 Stack Overflow（递归的本质就是栈），为什么会栈溢出？因为重复计算，举个栗子： 当n=4时， Fibonacci(4) = Fibonacci(3) + Fibonacci(2) ​ = Fibonacci(2) + Fibonacci(1) + Fibonacci(1) + Fibonacci(0) ​ = Fibonacci(1) + Fibonacci(0) + Fibonacci(1) + Fibonacci(1) + Fibonacci(0); 由于我们的代码并没有记录Fibonacci(1)和Fibonacci(0)的结果，对于程序来说它每次递归都是未知的，因此光是n=4时Fibonacci(1)就重复计算了3次之多。 其他解法： public int Fibonacci(int n) &#123; int preNum=1; int prePreNum=0; int result=0; if(n&lt;=1) return n; for(int i=2;i&lt;=n;i++)&#123; result=preNum+prePreNum; prePreNum=preNum; preNum=result; &#125; return result; &#125; 注：动态规划（Dynamic Programming）。 动态规划简单介绍：https://blog.csdn.net/u013309870/article/details/75193592 动态规划算法也可以说是 ‘记住求过的解来节省时间’; 动态规划算法的核心就是记住已经解决过的子问题的解。 上述代码需要用到三个数进行操作（preNum、prePreNum、result），实际上可以简化为两个数，从而节省空间，代码如下： public static int Fibonacci(int n) &#123; int pre = 0, next = 1; while(n--&gt;0) &#123; next += pre; pre = next - pre; &#125; return pre; &#125;]]></content>
@@ -628,18 +511,6 @@
         <tag>高等数学</tag>
         <tag>考研复习</tag>
         <tag>高昆轮</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[2019美赛赛后回顾+总结]]></title>
-    <url>%2F2019%2F02%2F06%2F2019%E7%BE%8E%E8%B5%9B%E8%B5%9B%E5%90%8E%E5%9B%9E%E9%A1%BE%2B%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[前言2018年的最后一个学期临近结束之际，学校机器人中心传来了美赛报名的消息。 找不到给力的队友； 想利用寒假专心准备3月份的蓝桥杯和考研复习（结果现在寒假临尽却没怎么准备这两项）； 更想参加2019年的国赛（此时还不知道美赛比国赛规模更大）。 基于这几点原因，一开始没打算报名美赛，但离报名结束没几天，实验室一名同学孙同学突然找到我邀我组队参赛，由于上次的宁夏建模赛我和他的队伍都获奖了，所以觉得队友应该靠得住，便同意组队参赛了，也开始将MATLAB等系列软件重新安装回了电脑。 赛前准备相对宁夏赛和国赛临时拉凑的两名队友来说（没有贬低当初队友之意，只是当时我们三个都没有参赛经验，能力不足），此次的两名队友更显专业和强大。在赛前几天，我们对赛时如何让沟通进行了线上探讨（由于美赛期间我们都已放假回家，所以我们比赛4天4夜都要靠线上交流，相对宁夏赛和国赛来说，增加了一定的限制与难度），王同学（队长）给出了沟通方案： 通过QQ群语音交流，借助TeamViewer软件辅助之； 论文写作依靠石墨文档（并且王还将每个人负责论文哪几块部分进行了分工）； 王还在我们三个人的群里发了一些美赛注意事项等文献文档； 除上述之外，王还提供了番羽土啬的工具和方法，让我在比赛期间可以尽情访问Google（对我用处颇大）。 还有许多细节，在此不一一赘述。通过这些，我发现王是一个做事很有条理的严谨之人，也是一名强大的队友+负责的队长，让我不论是在技术还是处事方法上都受益颇多，另一名队友孙同学赛前在群里发言较少，但也是一名很强大的队友，对很多数学模型有有所了解，代码技术上比我和王都要强（这在比赛中有所体现）。在赛前，我阅读了一些历年的优秀美赛获奖论文并将自己拥有的一些资料共享到了群里，在大致准备完毕之后，我们在比赛前一晚都早早睡去，准备以最饱满的精神状态迎接第二天凌晨6点的美赛开题。 比赛开始2019年1月25日凌晨6点，我早早起了床，洗漱完毕，在电脑面前等待着开题，当然，还有我的队友一起。没多久，ABCDEF六道题全部出炉，我们三个对各题进行了浏览： A题：我们首先同时对A题进行了阅读，A题是假设恐龙生存在现代，让我们对龙的特征、行为、习惯、饮食和生存所需环境等方面进行分析； B题：2017年飓风袭击了美国的波多黎各，造成了大量伤亡和交通的瘫痪。一家公司企图设计一种由 无人机+医疗包 组合而成的灾害应对系统运往灾区进行医疗运输和道路侦察。要求我们对1.集装箱、无人机、医疗包的装箱进行研究；2.集装箱在灾区的安置点的选址进行确定；3.针对医疗运输和道路侦察两方面分别对无人机进行排班； C题：美国阿片药物危机（美国吸毒泛滥）。此题给出了庞大的数据，基于这些数据进行题目分析与作答。 D题：开发卢浮宫紧急疏散模型…… 我们只阅读了ABCD三道题，后面在B和D之间进行纠结。（我觉得A题关于恐龙google查询出的结果资料太过少，难以解题；C题数据太过庞多，不易掌控，且我对这种大量数据分析类题目好感不佳；）王和孙一开始都想选D题，因为从孙的发言中貌似有了D题的大致解题思路，而我却对B题情有独钟： 因为ABC属于MCM，而DEF属于ICM，两者在难易程度、评比、题型等各方面都有所差别（MCM更难），D题虽然题目容易理解（看完题就知道要我们干什么），但肯定会有大量团队选择这道题，在难度较小，选题者众多的情况下，要想获奖及必须在保证解题正确的情况下突出解题的创新性；B题难度较大（看完题我们3人都不知道题目要我们干什么，该如何下手），但选择的人肯定会少很多，在难度较大、选题者少的情况下，只要解题正确、逻辑连贯合理就很容易拿奖。 我将我的上述想法分享给了王和孙，王应该利用小号最加了数学建模类的群（神秘群），分享给了我们一些该群的各题解题参考思路，最终我们决定先试着解B题，若长时间没有思路则放弃B题转攻D题。 开始解题(简单叙述)我们3个对B题进行了多次阅读，但仍没有完全搞懂B的意思，于是我们打算摸着石头过河，边走边看，我们先对第一问进行了分析，我们研究出第一问就是要我们筛选出性能最佳的无人机和医疗套餐，并制定出它们的装箱方案。我们试了很多种方法，但第一天结束都没有将第一问解出来，当天晚上，我们搜集到网上的一个思路参考视频，确定了大致的解题思路（途中历经了各种方法尝试但都无果，过程十分痛苦，在此不做赘述，只道最后解决方案）。最后，第一问孙同学完成了无人机和医疗套餐的筛选以及该部分论文的写作，我完成了无人机+医疗包的数量确定（我列出了多目标多约束方程，但解不出，最后孙解出来了），随后我完成了该部分论文的写作，至于装箱问题，我们一开始无从下手，直至比赛最后一天才解决。完成了这些，已经过去了两天两夜的时间。 我们通过思路视频了解到第二问是B题重中之重，利用软件ArcGIS可有效解题，于是我们安装了ArcGIS,但……我们用不来！！！我们花了很长很长很长的时间对波多黎各的各种地理数据进行查询（过程十分苦难，言之想哭），我们对ArcGIS进行了简单学习，还是无从下手（我们的3人小群也长时间不发一言，因为大家都没有思路，很是苦恼），可所剩时间不多了，还有3问等着我们解决（第三问分为两小问），于是在第三天下午，我们决定王负责论文的整理+翻译（真的很累，是个细致活），孙先试着解第三问，我则负责专攻第二问。 然后，我们便各自开始了自己的工作，我花了一下午的时间大致摸清了ArcGIS在选址方面的运用，并试着利用来之不易的数据文件进行ArcGIS求解，最终，在第三天的晚上，我奋斗到凌晨5点半（比赛结束大家聊天发现3个人都差不多一宿没睡），才完成了第二问的70%，不敌困意，睡了两个半小时，然后接着干，最终，在第四天临近中午的时候，我完成了第二问，但求出来的结果不是很理想。 （此处略去……千辛万苦、千辛万苦、千辛万苦、千辛万苦） 最后，在离提交时刻还剩不到3小时的时候，我们第三问的最后一小问并没有解出来（这一问是由我负责，我写到最后发现自己貌似写错了，加上比赛剩余时间严重不足以及第二问负荷过大，实在没有思路怎么写下去），其他题目已经大致完成求解。然后我们一起辅助王对论文进行摘要、问题分析、备忘录、参考文献等细节进行书写。 最终，在9点30左右提交了并不完美的论文，于9点45左右提交成功（提交时间为10:00）。然后发现参考文献出现了中文，估计凉了…… 赛后总结虽然我们最后并没有提交出一份完美的论文，但我们3个人都很满足，鏖战4天4夜，总共没人只睡了不到10个小时。对于我来说，得到了以下收获： 通过王我学到了做事要有准备，他真的是一个严谨细心的人，作为队长，名副其实（值得我好好学习）； 一个晚上大致学会ArcGIS使用，一个人的学习能力+资料查询能力真的非常非常重要； 认识到LaTex的强大（王是用这个软件进行论文排版），打算进行这个软件的学习； 通过孙知道了自己应该学习更多的数学建模知识； 对于一个团队来说，队友真的十分重要，强大、配合默契的队友会让你事半功倍； 英语真的相当相当相当重要； 任何事情，绝不能轻言放弃！]]></content>
-      <categories>
-        <category>杂文随笔</category>
-      </categories>
-      <tags>
-        <tag>美赛</tag>
-        <tag>数学建模</tag>
       </tags>
   </entry>
   <entry>
@@ -713,51 +584,6 @@
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[finally到底是在return之前执行还是return之后执行？]]></title>
-    <url>%2F2019%2F01%2F11%2Ffinally%E5%88%B0%E5%BA%95%E6%98%AF%E5%9C%A8return%E4%B9%8B%E5%89%8D%E6%89%A7%E8%A1%8C%E8%BF%98%E6%98%AFreturn%E4%B9%8B%E5%90%8E%E6%89%A7%E8%A1%8C%EF%BC%9F%2F</url>
-    <content type="text"><![CDATA[文章出自:WeChat公众号-程序员乔戈里 对话表情包出自:WeChat公众号-叔婆饭 “尊重原创” finally是在什么时候用呢？ finally一般是在try里面捕获异常用的，为了确保某些操作一定可以执行。 public class Main &#123; public static void main(String[] args) &#123; query(); &#125; public static void query() &#123; int i = 0; try &#123; i ++; i = i / 0;// 抛出异常 System.out.println("某一些操作"); &#125; catch (Exception e) &#123; i += 20; &#125; finally &#123; System.out.println("必需要执行的操作"); &#125; &#125;&#125; 执行结果： 必需要执行的操作 比如说上面所示的代码，在try语句里面 i / 0 的话会抛出来异常，这样的话程序就在i / 0这里由于抛出了异常，所以程序不会继续往下去执行try包含的语句了。首先进入到catch语句里面，由于finally语句一定会执行，接下来就会执行finally中的语句，所以就得到了上面的执行结果。 比如我一些数据的关闭操作啦等，必须要执行的操作一定要放到finally语句，确保会执行。 finally语句一定会执行吗？ 一般来说，finally语句是一定会执行的 但有两种情况finally语句不执行: 在某些情况下，try语句压根就没有执行到，那么finally语句也一定就不会执行到了。 还有一种情况就是在try块中有System.exit(0);这样的语句，System.exit(0);是终止Java虚拟机JVM的，连JVM都停止了，所有都结束了，当然finally语句也不会被执行到。 重头戏：finally是在retrun执行前执行还是在retrun执行后执行？ public class Main &#123; public static void main(String[] args) &#123; int j = query(); System.out.println(j); &#125; public static int query() &#123; int i = 0; try &#123; System.out.print("try\n"); return i += 10; &#125; catch (Exception e) &#123; System.out.print("catch\n"); i += 20; &#125; finally &#123; System.out.print("finally-i:"+i + "\n"); i += 10; System.out.print("finally\n"); //return i; &#125; System.out.print("finish"); return 200; &#125;&#125; 执行结果： tryfinally-i:10finally10 通过结果可以看得出来：只要try语句执行了以后，就算try语句里面有retrun语句，finally还是会执行。这就算所谓的finally一定会执行！ 那么？finally是在return执行后再执行咯？ 准确地说：finally是在return语句执行之后，return语句返回之前执行的！ 晕了~晕了~ 妈呀！这是啥意思？什么叫“是在return语句执行之后，return语句返回之前执行的”？ 前半句：在return语句执行之后 代码中try语句块中，return i+=10; 这个时候i已经是10了，这个可以从输出的打印结果看出来，因为进入到finally语句的时候，有一个打印语句，打印结果中i就是10，就说明了return语句中的i+=10是已经执行了。 后半句：在return语句返回之前 public class Main &#123; public static void main(String[] args) &#123; int j = query(); System.out.println(j); &#125; public static int query() &#123; int i = 0; try &#123; System.out.print("try\n"); return i += 10; &#125; catch (Exception e) &#123; System.out.print("catch\n"); i += 20; &#125; finally &#123; System.out.print("finally-i:"+i + "\n"); i += 10; System.out.print("finally\n"); return i; &#125; &#125;&#125; 执行结果： tryfinally-i:10finally20 在JVM虚拟机种，有虚拟机栈，上面的代码中每一个方法都对应了一个栈帧，方法的执行对应的栈帧入栈，方法的执行完毕对应着栈帧的出栈。 栈帧可以理解为一个方法的运行空间。它主要由两部分构成，一部分是局部变量表，方法中定义的局部变量以及方法的参数就存放在这张表中；另一部分是操作数栈，用来存放操作数。 刚才的两段代码中的finally块中，i变量是要放到局部变量表的，每次有关于i的运算，都是要把i从局部变量表取出来（可以理解为copy一个副本），比如i += 10,那么需要把i和10都放到操作数栈中进行计算，然后得到一个结果，而这个结果是需要通过retrun语句写回到局部变量表。 第一段代码中的finally块中，虽然执行了i += 10,但是由于没有return，所以局部变量表中的内容没有变化，所以i还是10； 第二段代码中的finally块中，由于最后return i语句的执行，更新了局部变量中的i的值，所以最后返回的结果中i就是20了。 return返回后，就代表着方法执行结束，相应的该方法的栈帧就出栈了。而这个时候也就意味着，return返回是最后执行的，所以finally语句是在retrun返回之前执行的！ import java.util.ArrayList;import java.util.List;public class Main &#123; public static void main(String[] args) &#123; List&lt;String&gt; cats = new ArrayList&lt;&gt;(); cats = query(cats); System.out.println("----"); for(String cat : cats) System.out.println(cat); &#125; public static List&lt;String&gt; query(List&lt;String&gt; cats) &#123; int i = 0; try &#123; System.out.print("try\n"); cats.add("xiaoMeng"); return cats; &#125; catch (Exception e) &#123; System.out.print("catch\n"); &#125; finally &#123; System.out.print("finally\n"); cats.add("qiaoGeLi"); &#125; System.out.println("finish"); return null; &#125;&#125; 若按照漫画中的结论，输出结果最终应该不会打印”qiaoGeLi”，而只打印”xiaoMeng” 但是，上述代码最终是会打印出来”xiaoMeng”和”qiaoGeLi”的！！！ 总结： finally是在retrun语句执行后，return返回之前执行的，也就是说finally必执行（当然是建立在try执行的基础上） finally中修改的基本类型没有return是不影响返回结果的，有了retrun才会影响 finally中修改list ,map,set引用类型时，就算没有return，也是是影响返回结果的]]></content>
-      <categories>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[PPT:拆拆拆！拆解文字！]]></title>
-    <url>%2F2019%2F01%2F11%2FPPT%E6%8B%86%E6%8B%86%E6%8B%86%EF%BC%81%E6%8B%86%E8%A7%A3%E6%96%87%E5%AD%97%EF%BC%81%2F</url>
-    <content type="text"><![CDATA[首先看一下上面这张图中国汉字一笔一划、一撇一捺，透漏出一股工整大气之美，但有时候，将 汉字进行拆解，往往会得出不一样的新奇效果。 PPT拆解汉字，接下来就是见证奇迹的时刻：步骤1：在PPT中输入文字 步骤2：在汉字下方画一个矩形，并将颜色设为黑色 步骤3：全选页面文字与矩形 步骤4：找到工具栏中的合并形状选择拆分（视版本而定，版本不同合并形状位置亦可能不同，2019版本位于绘图下的插入形状一栏中） 步骤5：然后取消全选，删去文字中被黑色覆盖的部分以及多余的黑色矩形 步骤6：将汉字各部分进行移动拆解 效果图：]]></content>
-      <categories>
-        <category>PPT小技巧</category>
-      </categories>
-      <tags>
-        <tag>小技巧</tag>
-        <tag>PPT</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[什么是Markdown]]></title>
-    <url>%2F2019%2F01%2F09%2F%E4%BB%80%E4%B9%88%E6%98%AFmarkdown%2F</url>
-    <content type="text"><![CDATA[“We believe that writing is about content,about what you want to say-not about fancy formatting.” 我们坚信写作写的是内容，所思所想，而不是花样格式。 -Ulysses for Mac Word写作的痛苦像我们日常所使用到的文字编辑器例如word，在其工作界面提供了大量文字排版与字体设置的功能选项供我们选择（80%左右不会被使用到），像这种需要用户靠鼠标手动点击使用的文字软件称作富文本编辑器（耗时！耗力！反人类！）。富文本编辑器让我们浪费了大量的时间在文本排版上，是粗体or斜体，是宋体or黑体？？？然而，我们坚信写作写的是内容，所思所想，而不是花样格式。 相信每个人都经历过: Markdown定义Markdown 是一种轻量级标记语言，让写作者专注于写作而不用关注样式。优点众多，被越来越多的的写作人和撰稿者所使用。 虽说是一门标记语言，但markdown的语法相当简单，简单到每个人可在5分钟之内学会它！倘若你对前端编程知识有所了解，那么你完全可以将markdown视为一种简化版的HTML标记语言。 例如下图所示简单的markdown语法，将生成右图的页面效果： 图片来自花瓣网 Markdown写作的优点 从频繁的鼠标点击、排版设置中解放出来，专注于文字内容而非排版样式，安心写作。 轻松的导出HTML、PDF、word(配合插件使用)和本身的.md文件。 纯文本内容，兼容所有的文本编辑器与文字处理软件。 随时修改你的文章版本，不必像文字处理软件生成若干文件版本导致混乱。 可读、直观、学习成本低。 markdown支持的常用编辑器 在线 windows mac Github Typora Typora Stackedit MarkdownPad Mou 简书 MarkPad Macdown 博客园 Markdown Monster Ulysses CSDN Smark Miu ​ 本人选择了Typora，体验感jio良好(点击图片进入传送道) markdown语法(点击图片进入传送道)]]></content>
-      <categories>
-        <category>杂文随笔</category>
-      </categories>
-      <tags>
-        <tag>小技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[如何通过学位服辨别学科]]></title>
-    <url>%2F2019%2F01%2F09%2F%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E5%AD%A6%E5%A3%AB%E6%9C%8D%E8%BE%A8%E5%88%AB%E5%AD%A6%E7%A7%91%2F</url>
-    <content type="text"><![CDATA[学位服，由学位帽、流苏、学位袍、垂布等四部分构成。 垂布，又称披肩，是由连颈帽演化而来。 一方面使学位服整体上富于变化，起到特有的装饰作用； 更重要的一方面，是通过垂布标识出所获学位的不同学科归属和授予学位的学校。 垂布按 文科 粉色 理科 灰色 医学 白色 农学 绿色 工学 黄色 军事 红色 图片来自花瓣网]]></content>
-      <categories>
-        <category>冷知识</category>
-      </categories>
-      <tags>
-        <tag>冷知识</tag>
       </tags>
   </entry>
   <entry>
