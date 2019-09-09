@@ -147,20 +147,21 @@
 
 
 
-  <meta name="description" content="递归算法算法思想： 当二叉树为空时，深度为0； 当二叉树只有根结点时（即左、右子树均为空），深度为1； 其他情况，求二叉树的左、右子树高度的较大值+1（根结点），即为二叉树深度。  公式如下：$$depth(T)=\left{\begin{array}{}0       &amp;amp;      &amp;amp; {,当T=NULL时}\1     &amp;amp;      &amp;amp; {,当T的左右孩子均为空">
+  <meta name="description" content="递归算法算法思想： 当二叉树为空时，深度为0； 当二叉树只有根结点时（即左、右子树均为空），深度为1； 其他情况，求二叉树的左、右子树高度的较大值+1（根结点），即为二叉树深度。  公式如下：   核心代码：int BtreeDepth(Btree T)&amp;#123;    int DL,DR,MAX;    if(T==NULL)&amp;#123;        return 0;    &amp;#125;">
 <meta name="keywords" content="二叉树,非递归">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算二叉树深度（高度）">
 <meta property="og:url" content="http://xiegangyouth.github.io/2019/09/09/数据结构：计算二叉树高度/index.html">
 <meta property="og:site_name" content="Slash Youth">
-<meta property="og:description" content="递归算法算法思想： 当二叉树为空时，深度为0； 当二叉树只有根结点时（即左、右子树均为空），深度为1； 其他情况，求二叉树的左、右子树高度的较大值+1（根结点），即为二叉树深度。  公式如下：$$depth(T)=\left{\begin{array}{}0       &amp;amp;      &amp;amp; {,当T=NULL时}\1     &amp;amp;      &amp;amp; {,当T的左右孩子均为空">
+<meta property="og:description" content="递归算法算法思想： 当二叉树为空时，深度为0； 当二叉树只有根结点时（即左、右子树均为空），深度为1； 其他情况，求二叉树的左、右子树高度的较大值+1（根结点），即为二叉树深度。  公式如下：   核心代码：int BtreeDepth(Btree T)&amp;#123;    int DL,DR,MAX;    if(T==NULL)&amp;#123;        return 0;    &amp;#125;">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2019/09/09/3HGvLzwQksiPVJq.jpg">
 <meta property="og:image" content="https://i.niupic.com/images/2019/01/11/5HFp.png">
-<meta property="og:updated_time" content="2019-09-09T13:37:54.043Z">
+<meta property="og:updated_time" content="2019-09-09T13:41:33.678Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算二叉树深度（高度）">
-<meta name="twitter:description" content="递归算法算法思想： 当二叉树为空时，深度为0； 当二叉树只有根结点时（即左、右子树均为空），深度为1； 其他情况，求二叉树的左、右子树高度的较大值+1（根结点），即为二叉树深度。  公式如下：$$depth(T)=\left{\begin{array}{}0       &amp;amp;      &amp;amp; {,当T=NULL时}\1     &amp;amp;      &amp;amp; {,当T的左右孩子均为空">
-<meta name="twitter:image" content="https://i.niupic.com/images/2019/01/11/5HFp.png">
+<meta name="twitter:description" content="递归算法算法思想： 当二叉树为空时，深度为0； 当二叉树只有根结点时（即左、右子树均为空），深度为1； 其他情况，求二叉树的左、右子树高度的较大值+1（根结点），即为二叉树深度。  公式如下：   核心代码：int BtreeDepth(Btree T)&amp;#123;    int DL,DR,MAX;    if(T==NULL)&amp;#123;        return 0;    &amp;#125;">
+<meta name="twitter:image" content="https://i.loli.net/2019/09/09/3HGvLzwQksiPVJq.jpg">
 
 
 
@@ -473,7 +474,7 @@
                 
               
 
-              <time title="创建时间：2019-09-09 13:36:03 / 修改时间：13:37:54" itemprop="dateCreated datePublished" datetime="2019-09-09T13:36:03Z">2019-09-09</time>
+              <time title="创建时间：2019-09-09 13:36:03 / 修改时间：13:41:33" itemprop="dateCreated datePublished" datetime="2019-09-09T13:36:03Z">2019-09-09</time>
             
 
             
@@ -555,7 +556,8 @@
 <li>当二叉树只有根结点时（即左、右子树均为空），深度为1；</li>
 <li>其他情况，求二叉树的左、右子树高度的较大值+1（根结点），即为二叉树深度。</li>
 </ul>
-<p>公式如下：<br>$$<br>depth(T)=\left{<br>\begin{array}{}<br>0       &amp;      &amp; {,当T=NULL时}\<br>1     &amp;      &amp; {,当T的左右孩子均为空时}\<br>max(depth(T-&gt;child),depth(T-&gt;rchild))+1     &amp;      &amp; {,其他情况}\<br>\end{array} \right.<br>$$</p>
+<p>公式如下：</p>
+<p> <img src="https://i.loli.net/2019/09/09/3HGvLzwQksiPVJq.jpg" alt="Snipaste_2019-09-09_21-40-06.jpg"></p>
 <h4 id="核心代码："><a href="#核心代码：" class="headerlink" title="核心代码："></a>核心代码：</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BtreeDepth</span><span class="params">(Btree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> DL,DR,MAX;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    DL=BtreeDepth(T-&gt;lchild);</span><br><span class="line">    DR=BtreeDepth(T-&gt;rchild);</span><br><span class="line">    MAX=DL&gt;DR?DL:DR;</span><br><span class="line">    <span class="keyword">return</span> MAX+<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="非递归算法"><a href="#非递归算法" class="headerlink" title="非递归算法"></a>非递归算法</h3><h4 id="算法思想：-1"><a href="#算法思想：-1" class="headerlink" title="算法思想："></a>算法思想：</h4><p>利用层次遍历的思想。主要思想是：<strong>一层一层地出队列</strong>。<font color="red">在每次访问完毕一层时，这时队列中存储的刚好是下一层所有的元素 。</font>设置一个工作结点指针last，在当前层访问完毕时指向下一层的最右结点（当前层访问完毕时队列中队尾结点），每次层次遍历出队时将出队结点与last进行比较，若二者相等，表明一层访问完毕，层数加一，并让last指向下一层的最右结点，直至遍历结束。</p>
 <h4 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h4><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">BtreeDepth</span><span class="params">(Btree T)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(T==<span class="literal">NULL</span>)&#123;<span class="comment">//树空，则高度为0</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    Btree *Q[MaxSize],*p;<span class="comment">//定义一个元素为二叉树结点且容量足够的队列</span></span><br><span class="line">    <span class="keyword">int</span> front=<span class="number">-1</span>,rear=<span class="number">-1</span>;<span class="comment">//初始时刻队列为空</span></span><br><span class="line">    <span class="keyword">int</span> last=<span class="number">0</span>,level=<span class="number">0</span>;<span class="comment">//last指向下一层的最右结点</span></span><br><span class="line">    Q[++rear]=T;<span class="comment">//根结点入队</span></span><br><span class="line">    <span class="keyword">while</span>(front&lt;rear)&#123;</span><br><span class="line">        p=Q[++front];<span class="comment">//队头元素出队</span></span><br><span class="line"><span class="comment">/*若当前结点为最右结点：当前层遍历完毕，层数+1，并奖last指向下一层最右结点*/</span></span><br><span class="line">        <span class="keyword">if</span>(front==last)&#123;</span><br><span class="line">            level++;</span><br><span class="line">            last=rear;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">/*层次遍历：左孩子入队*/</span></span><br><span class="line">        <span class="keyword">if</span>(p-&gt;lchild)&#123;</span><br><span class="line">            Q[++rear]=p-&gt;lchild;</span><br><span class="line">        &#125;</span><br><span class="line"><span class="comment">/*层次遍历：右孩子入队*/</span></span><br><span class="line">        <span class="keyword">if</span>(p-&gt;rchild)&#123;</span><br><span class="line">            Q[++rear]=p-&gt;rchild;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> level;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
