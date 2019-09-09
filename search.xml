@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[JavaScript实现轮播图：001]]></title>
-    <url>%2F2019%2F04%2F24%2FJavaScript%E5%AE%9E%E7%8E%B0%E8%BD%AE%E6%92%AD%E5%9B%BE%EF%BC%9A001%2F</url>
-    <content type="text"><![CDATA[首先我们来看一下这个小案例的最终效果： 一.事先准备好我们的素材 四张1200*460像素的图片素材 作为上一张下一张按钮的箭头小图标一个 二.代码步骤1.创建一个class与id均命名为”main”的div盒子这个main盒子作为整个轮播图的总容器，图片、按钮、导航等元素均包含在main盒子里面 123456789101112&lt;!DOCTYPE html&gt;&lt;html&gt; &lt;head&gt; &lt;meta charset="utf-8" /&gt; &lt;title&gt;轮播图&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div class="main" id="main"&gt; &lt;/div&gt; &lt;/body&gt;&lt;/html&gt; 2.在main盒子中创建一个class=”banner” id=”banner”的div盒子这个盒子用来展示轮播的图片，此处我们以展示4张图片为例]]></content>
-      <categories>
-        <category>前端工程师</category>
-        <category>JavaScript</category>
-      </categories>
-      <tags>
-        <tag>JavaScript</tag>
-        <tag>轮播图</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[零基础学高数017：不定积分003]]></title>
     <url>%2F2019%2F04%2F21%2F%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AD%A6%E9%AB%98%E6%95%B0017%EF%BC%9A%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86003%2F</url>
     <content type="text"><![CDATA[1.有理函数的积分（数三不考） 2.简单无理函数的积分 3.,三角有理式的积分]]></content>
