@@ -548,7 +548,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/03/06/5c7fba8dd030a.png" rel="gallery_ck0cfeb7j000xi4wgxv5v77oy" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/03/06/5c7fba8dd030a.png" rel="gallery_ck0cfq5tj000ziwwgaomkwfj6" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2019/03/06/5c7fba8dd030a.png" itemprop="contentUrl">
               </a>
             
@@ -577,7 +577,7 @@
 <p>对第一象限圆内的坐标点进行遍历，圆内某点p1(x,y)，p1左边相邻点p2(x-1,y)，p1上边相邻点p3(x,y+1)，</p>
 <p><strong>若p1、p2、p3三点同时在圆内→这三点所确定的小方格在圆内</strong></p>
 <p><strong>Java代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">1000</span>; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (f(i, j)) &#123;</span><br><span class="line">					count++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(count * <span class="number">4</span>);<span class="comment">//注意要乘4:4个象限</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (x * x + y * y &lt;= <span class="number">1000</span> * <span class="number">1000</span> &amp;&amp; (x - <span class="number">1</span>) * (x - <span class="number">1</span>) + y * y &lt;= <span class="number">1000</span> * <span class="number">1000</span></span><br><span class="line">				&amp;&amp; x * x + (y + <span class="number">1</span>) * (y + <span class="number">1</span>) &lt;= <span class="number">1000</span> * <span class="number">1000</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">1000</span>; i++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt;= <span class="number">1000</span>; j++) &#123;</span><br><span class="line">				<span class="keyword">if</span> (f(i, j)) &#123;</span><br><span class="line">					count++;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(count * <span class="number">4</span>);<span class="comment">//注意要乘4:4个象限</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (x * x + y * y &lt;= <span class="number">1000</span> * <span class="number">1000</span> &amp;&amp; (x - <span class="number">1</span>) * (x - <span class="number">1</span>) + y * y &lt;= <span class="number">1000</span> * <span class="number">1000</span></span><br><span class="line">				&amp;&amp; x * x + (y + <span class="number">1</span>) * (y + <span class="number">1</span>) &lt;= <span class="number">1000</span> * <span class="number">1000</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>输出结果：3137548</p>
 </blockquote>
@@ -585,7 +585,7 @@
 <p>只看第一象限，a点 从x轴从右往左遍历，b从a点出发，往上走，直到刚要走出圆，这时候 原点与a，a与b，形成一个矩形，count+=矩形面积（即为该矩形包含方格个数），然后a继续走，b继续走，又形成一个矩形，但这次b，就要减去上次b的y坐标；</p>
 <p> <img src="https://i.loli.net/2019/03/06/5c7fb9023ab8a.jpg" alt="Snipaste_2019-03-06_20-11-35.jpg"></p>
 <p><strong>Java代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main0102</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a,b=<span class="number">0</span>,preB=b,count=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(a=<span class="number">1000</span>;a&gt;=<span class="number">0</span>;a--) &#123;</span><br><span class="line">			<span class="keyword">while</span>(a*a+b*b&lt;=<span class="number">1000</span>*<span class="number">1000</span>) &#123;</span><br><span class="line">				b++;</span><br><span class="line">			&#125;</span><br><span class="line">			b--;</span><br><span class="line">			count+=a*(b-preB);<span class="comment">//preB为上一次b点的值</span></span><br><span class="line">			preB=b;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(count*<span class="number">4</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main0102</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> a,b=<span class="number">0</span>,preB=b,count=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">for</span>(a=<span class="number">1000</span>;a&gt;=<span class="number">0</span>;a--) &#123;</span><br><span class="line">			<span class="keyword">while</span>(a*a+b*b&lt;=<span class="number">1000</span>*<span class="number">1000</span>) &#123;</span><br><span class="line">				b++;</span><br><span class="line">			&#125;</span><br><span class="line">			b--;</span><br><span class="line">			count+=a*(b-preB);<span class="comment">//preB为上一次b点的值</span></span><br><span class="line">			preB=b;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(count*<span class="number">4</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>输出结果：3137548</p>
 </blockquote>
@@ -705,7 +705,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -732,7 +732,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -791,7 +803,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

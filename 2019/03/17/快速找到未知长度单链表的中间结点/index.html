@@ -147,19 +147,19 @@
 
 
 
-  <meta name="description" content="腾讯面试题快速找到未知长度单链表的中间结点  一般思路 先遍历链表，获得链表的长度L 然后再次从头开始遍历，循环L/2次找到中间结点 时间复杂度：O(L+L/2)  1234567891011121314151617181920212223242526272829303132333435class ListNode &amp;#123;	int val;	ListNode next;	ListNode(i">
+  <meta name="description" content="腾讯面试题快速找到未知长度单链表的中间结点  一般思路 先遍历链表，获得链表的长度L 然后再次从头开始遍历，循环L/2次找到中间结点 时间复杂度：O(L+L/2)  class ListNode &amp;#123;	int val;	ListNode next;	ListNode(int x) &amp;#123;		val = x;	&amp;#125;&amp;#125;public class Main &amp;#123;	p">
 <meta name="keywords" content="Java,链表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="快速找到未知长度单链表的中间结点">
 <meta property="og:url" content="http://xiegangyouth.github.io/2019/03/17/快速找到未知长度单链表的中间结点/index.html">
 <meta property="og:site_name" content="Slash Youth">
-<meta property="og:description" content="腾讯面试题快速找到未知长度单链表的中间结点  一般思路 先遍历链表，获得链表的长度L 然后再次从头开始遍历，循环L/2次找到中间结点 时间复杂度：O(L+L/2)  1234567891011121314151617181920212223242526272829303132333435class ListNode &amp;#123;	int val;	ListNode next;	ListNode(i">
+<meta property="og:description" content="腾讯面试题快速找到未知长度单链表的中间结点  一般思路 先遍历链表，获得链表的长度L 然后再次从头开始遍历，循环L/2次找到中间结点 时间复杂度：O(L+L/2)  class ListNode &amp;#123;	int val;	ListNode next;	ListNode(int x) &amp;#123;		val = x;	&amp;#125;&amp;#125;public class Main &amp;#123;	p">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.niupic.com/images/2019/03/17/5RNT.png">
 <meta property="og:updated_time" content="2019-03-17T04:01:42.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="快速找到未知长度单链表的中间结点">
-<meta name="twitter:description" content="腾讯面试题快速找到未知长度单链表的中间结点  一般思路 先遍历链表，获得链表的长度L 然后再次从头开始遍历，循环L/2次找到中间结点 时间复杂度：O(L+L/2)  1234567891011121314151617181920212223242526272829303132333435class ListNode &amp;#123;	int val;	ListNode next;	ListNode(i">
+<meta name="twitter:description" content="腾讯面试题快速找到未知长度单链表的中间结点  一般思路 先遍历链表，获得链表的长度L 然后再次从头开始遍历，循环L/2次找到中间结点 时间复杂度：O(L+L/2)  class ListNode &amp;#123;	int val;	ListNode next;	ListNode(int x) &amp;#123;		val = x;	&amp;#125;&amp;#125;public class Main &amp;#123;	p">
 <meta name="twitter:image" content="https://i.niupic.com/images/2019/03/17/5RNT.png">
 
 
@@ -548,7 +548,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.niupic.com/images/2019/03/17/5RNT.png" rel="gallery_ck0cfeb7g000si4wgtqxvjtck" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.niupic.com/images/2019/03/17/5RNT.png" rel="gallery_ck0cfq5tg000viwwghva5tbhu" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.niupic.com/images/2019/03/17/5RNT.png" itemprop="contentUrl">
               </a>
             
@@ -567,7 +567,7 @@
 <li>然后再次从头开始遍历，循环L/2次找到中间结点</li>
 <li>时间复杂度：O(L+L/2)</li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line"></span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">		val = x;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		ListNode curNode = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">		ListNode node = curNode;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++) &#123;</span><br><span class="line">			ListNode newNode = <span class="keyword">new</span> ListNode(i);</span><br><span class="line">			curNode.next = newNode;</span><br><span class="line">			curNode = curNode.next;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(fingMidNode(node));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fingMidNode</span><span class="params">(ListNode node)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> length=<span class="number">0</span>;</span><br><span class="line">		ListNode curNode=node;</span><br><span class="line">		<span class="keyword">while</span>(curNode!=<span class="keyword">null</span>) &#123;</span><br><span class="line">			length++;</span><br><span class="line">			curNode=curNode.next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;length/<span class="number">2</span>;i++) &#123;</span><br><span class="line">			node=node.next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> node.val;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line"></span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">		val = x;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		ListNode curNode = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">		ListNode node = curNode;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++) &#123;</span><br><span class="line">			ListNode newNode = <span class="keyword">new</span> ListNode(i);</span><br><span class="line">			curNode.next = newNode;</span><br><span class="line">			curNode = curNode.next;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(fingMidNode(node));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fingMidNode</span><span class="params">(ListNode node)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span> length=<span class="number">0</span>;</span><br><span class="line">		ListNode curNode=node;</span><br><span class="line">		<span class="keyword">while</span>(curNode!=<span class="keyword">null</span>) &#123;</span><br><span class="line">			length++;</span><br><span class="line">			curNode=curNode.next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;length/<span class="number">2</span>;i++) &#123;</span><br><span class="line">			node=node.next;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> node.val;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>输出结果：5</p>
 </blockquote>
@@ -578,7 +578,7 @@
 <li><strong>当search指向末尾结点的时候，mid正好就指向了中间结点</strong></li>
 <li><strong>算法复杂度：O(L/2)</strong></li>
 </ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line"></span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">		val = x;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		ListNode curNode = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">		ListNode node = curNode;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++) &#123;</span><br><span class="line">			ListNode newNode = <span class="keyword">new</span> ListNode(i);</span><br><span class="line">			curNode.next = newNode;</span><br><span class="line">			curNode = curNode.next;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(fingMidNode(node));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fingMidNode</span><span class="params">(ListNode n)</span> </span>&#123;</span><br><span class="line">		ListNode search, mid;</span><br><span class="line">		search = n;</span><br><span class="line">		mid = n;</span><br><span class="line">		<span class="keyword">while</span> (search.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (search.next.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">				search = search.next.next;</span><br><span class="line">				mid = mid.next;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				search = search.next;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> mid.val;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> val;</span><br><span class="line">	ListNode next;</span><br><span class="line"></span><br><span class="line">	ListNode(<span class="keyword">int</span> x) &#123;</span><br><span class="line">		val = x;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		ListNode curNode = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">		ListNode node = curNode;</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++) &#123;</span><br><span class="line">			ListNode newNode = <span class="keyword">new</span> ListNode(i);</span><br><span class="line">			curNode.next = newNode;</span><br><span class="line">			curNode = curNode.next;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(fingMidNode(node));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fingMidNode</span><span class="params">(ListNode n)</span> </span>&#123;</span><br><span class="line">		ListNode search, mid;</span><br><span class="line">		search = n;</span><br><span class="line">		mid = n;</span><br><span class="line">		<span class="keyword">while</span> (search.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (search.next.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">				search = search.next.next;</span><br><span class="line">				mid = mid.next;</span><br><span class="line">			&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">				search = search.next;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> mid.val;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -617,8 +617,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/16/零基础学高数014：曲率渐近线/" rel="next" title="零基础学高数014：曲率渐近线">
-                <i class="fa fa-chevron-left"></i> 零基础学高数014：曲率渐近线
+              <a href="/2019/03/16/JavaScript中的数组/" rel="next" title="JavaScript中的数组">
+                <i class="fa fa-chevron-left"></i> JavaScript中的数组
               </a>
             
           </div>
@@ -705,7 +705,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -732,7 +732,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -791,7 +803,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -156,7 +156,7 @@
 <meta property="og:description" content="【题目】设计一个递归算法生成n个元素{r1,r2,…,rn}的全排列。  【算法讲解】：  设R={r1,r2,…,rn}是要进行排列的n个元素，Ri=R-{ri}。集合X中元素的全排列记为perm(X)。(ri)perm(X)表示在全排列perm(X)的每一个排列前加上前缀得到的排列。R的全排列可归纳定义如下：当n=1时，perm(R)=(r)，其中r是集合R中唯一的元素；当n&amp;gt;1时，pe">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/02/15/5c667881da9a5.png">
-<meta property="og:updated_time" content="2019-02-15T08:30:34.613Z">
+<meta property="og:updated_time" content="2019-09-09T13:20:43.095Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="经典递归问题：全排列问题">
 <meta name="twitter:description" content="【题目】设计一个递归算法生成n个元素{r1,r2,…,rn}的全排列。  【算法讲解】：  设R={r1,r2,…,rn}是要进行排列的n个元素，Ri=R-{ri}。集合X中元素的全排列记为perm(X)。(ri)perm(X)表示在全排列perm(X)的每一个排列前加上前缀得到的排列。R的全排列可归纳定义如下：当n=1时，perm(R)=(r)，其中r是集合R中唯一的元素；当n&amp;gt;1时，pe">
@@ -477,6 +477,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-09 13:20:43" itemprop="dateModified" datetime="2019-09-09T13:20:43Z">2019-09-09</time>
+              
+            
           </span>
 
           
@@ -491,7 +507,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/每日一道编程题/" itemprop="url" rel="index"><span itemprop="name">每日一道编程题</span></a></span>
 
                 
                 
@@ -548,7 +564,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/15/5c667881da9a5.png" rel="gallery_ck0cfeb8a001ui4wgguyv9ew2" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/15/5c667881da9a5.png" rel="gallery_ck0cfq5u4001viwwghhuwj208" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2019/02/15/5c667881da9a5.png" itemprop="contentUrl">
               </a>
             
@@ -571,7 +587,7 @@
 <p>当n=3，并且E={a，b，c}，则：<br>perm(E)=a.perm({b,c}) + b.perm({a,c}) + c.perm({a,b})<br>perm({b,c})=b.perm(c) + c.perm(b)<br>a.perm({b,c})=a.b.perm(c) + a.c.perm(b)<br>​             =a.b.c + a.c.b=(abc, acb)</p>
 </blockquote>
 <p><strong>我的代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] data=<span class="string">"ABC"</span>.toCharArray();</span><br><span class="line">        f(data,<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">char</span>[] data,<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(k==data.length)&#123;<span class="comment">//只剩下一个元素</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.length;i++)&#123;</span><br><span class="line">                System.out.print(data[i]+<span class="string">" "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=k;i&lt;data.length;i++)&#123;</span><br><span class="line">            &#123;<span class="keyword">char</span> c=data[k];data[k]=data[i];data[i]=c;&#125;<span class="comment">//试探</span></span><br><span class="line">            f(data,k+<span class="number">1</span>);</span><br><span class="line">            &#123;<span class="keyword">char</span> c=data[k];data[k]=data[i];data[i]=c;&#125;<span class="comment">//回溯</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] data=<span class="string">"ABC"</span>.toCharArray();</span><br><span class="line">        f(data,<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">char</span>[] data,<span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(k==data.length)&#123;<span class="comment">//只剩下一个元素</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;data.length;i++)&#123;</span><br><span class="line">                System.out.print(data[i]+<span class="string">" "</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=k;i&lt;data.length;i++)&#123;</span><br><span class="line">            &#123;<span class="keyword">char</span> c=data[k];data[k]=data[i];data[i]=c;&#125;<span class="comment">//试探</span></span><br><span class="line">            f(data,k+<span class="number">1</span>);</span><br><span class="line">            &#123;<span class="keyword">char</span> c=data[k];data[k]=data[i];data[i]=c;&#125;<span class="comment">//回溯</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>关于回溯：</strong></p>
 <p>3个电灯串联在一起，其中有个灯泡坏了，通过在灯泡正负极接上一根导线的方法来筛选出坏了的灯泡，每次检测下一灯泡时，必须先将连在上一灯泡的导线取下，保持在最初状态，这就是回溯。</p>
 <p> <img src="https://i.loli.net/2019/02/15/5c667791270f8.png" alt="Snipaste_2019-02-15_16-25-28.png"></p>
@@ -695,7 +711,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -722,7 +738,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -781,7 +809,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -147,19 +147,19 @@
 
 
 
-  <meta name="description" content="问：  大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。n&amp;lt;=39  斐波那契数列简单介绍  我的解法： 123456public static int Fibonacci(int n) &amp;#123;       if(n &amp;lt;= 1)&amp;#123;           return n;       &amp;#125;       retu">
+  <meta name="description" content="问：  大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。n&amp;lt;=39  斐波那契数列简单介绍  我的解法： public static int Fibonacci(int n) &amp;#123;       if(n &amp;lt;= 1)&amp;#123;           return n;       &amp;#125;       return Fib">
 <meta name="keywords" content="Java,蓝桥杯,算法">
 <meta property="og:type" content="article">
 <meta property="og:title" content="动态规划：斐波那契数列">
 <meta property="og:url" content="http://xiegangyouth.github.io/2019/02/09/动态规划：斐波那契数列/index.html">
 <meta property="og:site_name" content="Slash Youth">
-<meta property="og:description" content="问：  大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。n&amp;lt;=39  斐波那契数列简单介绍  我的解法： 123456public static int Fibonacci(int n) &amp;#123;       if(n &amp;lt;= 1)&amp;#123;           return n;       &amp;#125;       retu">
+<meta property="og:description" content="问：  大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。n&amp;lt;=39  斐波那契数列简单介绍  我的解法： public static int Fibonacci(int n) &amp;#123;       if(n &amp;lt;= 1)&amp;#123;           return n;       &amp;#125;       return Fib">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/02/09/5c5e9b7acc885.png">
 <meta property="og:updated_time" content="2019-02-09T13:08:06.758Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="动态规划：斐波那契数列">
-<meta name="twitter:description" content="问：  大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。n&amp;lt;=39  斐波那契数列简单介绍  我的解法： 123456public static int Fibonacci(int n) &amp;#123;       if(n &amp;lt;= 1)&amp;#123;           return n;       &amp;#125;       retu">
+<meta name="twitter:description" content="问：  大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。n&amp;lt;=39  斐波那契数列简单介绍  我的解法： public static int Fibonacci(int n) &amp;#123;       if(n &amp;lt;= 1)&amp;#123;           return n;       &amp;#125;       return Fib">
 <meta name="twitter:image" content="https://i.loli.net/2019/02/09/5c5e9b7acc885.png">
 
 
@@ -552,7 +552,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/09/5c5e9b7acc885.png" rel="gallery_ck0cfeb78000ki4wg02jf28pm" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/09/5c5e9b7acc885.png" rel="gallery_ck0cfq5tb000niwwgigi3qrsq" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2019/02/09/5c5e9b7acc885.png" itemprop="contentUrl">
               </a>
             
@@ -570,7 +570,7 @@
 <p><strong>斐波那契数列简单介绍</strong></p>
 <p><img src="https://i.loli.net/2019/02/09/5c5e97dfa337d.jpg" alt></p>
 <p><strong>我的解法：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(n &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> n;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> Fibonacci(n-<span class="number">1</span>)+Fibonacci(n-<span class="number">2</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(n &lt;= <span class="number">1</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> n;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> Fibonacci(n-<span class="number">1</span>)+Fibonacci(n-<span class="number">2</span>);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <p> <img src="https://i.loli.net/2019/02/09/5c5e9e4dafc16.png" alt="my.png"></p>
 <p><strong>注：</strong>从<strong>Fibonacci(n-1)+Fibonacci(n-2)</strong>明显看出使用的是递归，此题用递归两三行代码即可搞定。<strong>但是</strong>，若出题者准备着一个超大的n，那么很有可能会 Stack Overflow（递归的本质就是栈），为什么会栈溢出？因为<strong>重复计算</strong>，举个栗子：</p>
 <blockquote>
@@ -581,7 +581,7 @@
 </blockquote>
 <p>由于我们的代码并没有记录Fibonacci(1)和Fibonacci(0)的结果，对于程序来说它每次递归都是未知的，因此光是n=4时Fibonacci(1)就重复计算了3次之多。</p>
 <p><strong>其他解法：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> preNum=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> prePreNum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> result=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(n&lt;=<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            result=preNum+prePreNum;</span><br><span class="line">            prePreNum=preNum;</span><br><span class="line">            preNum=result;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> preNum=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> prePreNum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> result=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(n&lt;=<span class="number">1</span>)</span><br><span class="line">            <span class="keyword">return</span> n;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            result=preNum+prePreNum;</span><br><span class="line">            prePreNum=preNum;</span><br><span class="line">            preNum=result;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line"> </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p> <img src="https://i.loli.net/2019/02/09/5c5ecd9465c52.png" alt="Snipaste_2019-02-09_20-54-33.png"></p>
 <p><strong>注：<font color="blue">动态规划</font>（Dynamic Programming）。</strong></p>
 <blockquote>
@@ -590,7 +590,7 @@
 <p>动态规划算法的核心就是记住已经解决过的子问题的解。</p>
 </blockquote>
 <p> 上述代码需要用到三个数进行操作（preNum、prePreNum、result），实际上可以简化为两个数，从而节省空间，代码如下：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> pre = <span class="number">0</span>, next = <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span>(n--&gt;<span class="number">0</span>) &#123;</span><br><span class="line">           next += pre;</span><br><span class="line">           pre = next - pre;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> pre;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">Fibonacci</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">int</span> pre = <span class="number">0</span>, next = <span class="number">1</span>;</span><br><span class="line">       <span class="keyword">while</span>(n--&gt;<span class="number">0</span>) &#123;</span><br><span class="line">           next += pre;</span><br><span class="line">           pre = next - pre;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> pre;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -642,8 +642,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/02/13/青蛙跳台阶/" rel="prev" title="青蛙跳台阶">
-                青蛙跳台阶 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/02/12/不要自称为程序员/" rel="prev" title="不要自称为程序员">
+                不要自称为程序员 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -711,7 +711,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -738,7 +738,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -797,7 +809,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

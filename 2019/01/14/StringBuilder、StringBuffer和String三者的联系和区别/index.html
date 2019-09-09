@@ -147,19 +147,19 @@
 
 
 
-  <meta name="description" content="1.String类String的值是不可变的，这就导致每次对String的操作都会生成新的String对象，不仅效率低下，而且大量浪费有限的内存空间。 12String a = &quot;a&quot;; //假设a指向地址0x0001 a = &quot;b&quot;;//重新赋值后a指向地址0x0002，但0x0001地址中保存的&quot;a&quot;依旧存在，但已经不再是a所指向的,a 已经指向了其它地址。 因此String的操作都是改变赋值">
+  <meta name="description" content="1.String类String的值是不可变的，这就导致每次对String的操作都会生成新的String对象，不仅效率低下，而且大量浪费有限的内存空间。 String a = &quot;a&quot;; //假设a指向地址0x0001 a = &quot;b&quot;;//重新赋值后a指向地址0x0002，但0x0001地址中保存的&quot;a&quot;依旧存在，但已经不再是a所指向的,a 已经指向了其它地址。 因此String的操作都是改变赋值地址">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="StringBuilder、StringBuffer和String三者的联系和区别">
 <meta property="og:url" content="http://xiegangyouth.github.io/2019/01/14/StringBuilder、StringBuffer和String三者的联系和区别/index.html">
 <meta property="og:site_name" content="Slash Youth">
-<meta property="og:description" content="1.String类String的值是不可变的，这就导致每次对String的操作都会生成新的String对象，不仅效率低下，而且大量浪费有限的内存空间。 12String a = &quot;a&quot;; //假设a指向地址0x0001 a = &quot;b&quot;;//重新赋值后a指向地址0x0002，但0x0001地址中保存的&quot;a&quot;依旧存在，但已经不再是a所指向的,a 已经指向了其它地址。 因此String的操作都是改变赋值">
+<meta property="og:description" content="1.String类String的值是不可变的，这就导致每次对String的操作都会生成新的String对象，不仅效率低下，而且大量浪费有限的内存空间。 String a = &quot;a&quot;; //假设a指向地址0x0001 a = &quot;b&quot;;//重新赋值后a指向地址0x0002，但0x0001地址中保存的&quot;a&quot;依旧存在，但已经不再是a所指向的,a 已经指向了其它地址。 因此String的操作都是改变赋值地址">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/01/14/5c3cae85e2396.jpg">
 <meta property="og:updated_time" content="2019-01-14T15:45:34.208Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="StringBuilder、StringBuffer和String三者的联系和区别">
-<meta name="twitter:description" content="1.String类String的值是不可变的，这就导致每次对String的操作都会生成新的String对象，不仅效率低下，而且大量浪费有限的内存空间。 12String a = &quot;a&quot;; //假设a指向地址0x0001 a = &quot;b&quot;;//重新赋值后a指向地址0x0002，但0x0001地址中保存的&quot;a&quot;依旧存在，但已经不再是a所指向的,a 已经指向了其它地址。 因此String的操作都是改变赋值">
+<meta name="twitter:description" content="1.String类String的值是不可变的，这就导致每次对String的操作都会生成新的String对象，不仅效率低下，而且大量浪费有限的内存空间。 String a = &quot;a&quot;; //假设a指向地址0x0001 a = &quot;b&quot;;//重新赋值后a指向地址0x0002，但0x0001地址中保存的&quot;a&quot;依旧存在，但已经不再是a所指向的,a 已经指向了其它地址。 因此String的操作都是改变赋值地址">
 <meta name="twitter:image" content="https://i.loli.net/2019/01/14/5c3cae85e2396.jpg">
 
 
@@ -548,7 +548,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/01/14/5c3cae85e2396.jpg" rel="gallery_ck0cfeb5z0000i4wgo2835s89" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/01/14/5c3cae85e2396.jpg" rel="gallery_ck0cfq5sj0002iwwgowxd5k1h" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2019/01/14/5c3cae85e2396.jpg" itemprop="contentUrl">
               </a>
             
@@ -561,10 +561,10 @@
 
       
         <h3 id="1-String类"><a href="#1-String类" class="headerlink" title="1.String类"></a>1.String类</h3><p>String的值是不可变的，这就导致每次对String的操作都会生成新的String对象，不仅效率低下，而且大量浪费有限的内存空间。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String a = <span class="string">"a"</span>; <span class="comment">//假设a指向地址0x0001 </span></span><br><span class="line">a = <span class="string">"b"</span>;<span class="comment">//重新赋值后a指向地址0x0002，但0x0001地址中保存的"a"依旧存在，但已经不再是a所指向的,a 已经指向了其它地址。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String a = <span class="string">"a"</span>; <span class="comment">//假设a指向地址0x0001 </span></span><br><span class="line">a = <span class="string">"b"</span>;<span class="comment">//重新赋值后a指向地址0x0002，但0x0001地址中保存的"a"依旧存在，但已经不再是a所指向的,a 已经指向了其它地址。</span></span><br></pre></td></tr></table></figure>
 <p>因此String的操作都是改变赋值地址而不是改变值操作。</p>
 <h3 id="2-StringBuffer类"><a href="#2-StringBuffer类" class="headerlink" title="2.StringBuffer类"></a>2.StringBuffer类</h3><p>StringBuffer是可变类，和线程安全的字符串操作类，任何对它指向的字符串的操作都不会产生新的对象。<br>每个StringBuffer对象都有一定的缓冲区容量，当字符串大小没有超过容量时，不会分配新的容量，当字符串大小超过容量时，会自动增加容量。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">StringBuffer buf=<span class="keyword">new</span> StringBuffer(); <span class="comment">//分配长16字节的字符缓冲区 </span></span><br><span class="line">StringBuffer buf=<span class="keyword">new</span> StringBuffer(<span class="number">512</span>); <span class="comment">//分配长512字节的字符缓冲区 </span></span><br><span class="line">StringBuffer buf=<span class="keyword">new</span> StringBuffer(<span class="string">"this is a test"</span>)<span class="comment">//在缓冲区中存放了字符串，并在后面预留了16字节的空缓冲区。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">StringBuffer buf=<span class="keyword">new</span> StringBuffer(); <span class="comment">//分配长16字节的字符缓冲区 </span></span><br><span class="line">StringBuffer buf=<span class="keyword">new</span> StringBuffer(<span class="number">512</span>); <span class="comment">//分配长512字节的字符缓冲区 </span></span><br><span class="line">StringBuffer buf=<span class="keyword">new</span> StringBuffer(<span class="string">"this is a test"</span>)<span class="comment">//在缓冲区中存放了字符串，并在后面预留了16字节的空缓冲区。</span></span><br></pre></td></tr></table></figure>
 <h3 id="3-StringBuilder类"><a href="#3-StringBuilder类" class="headerlink" title="3.StringBuilder类"></a>3.StringBuilder类</h3><p>StringBuilder和StringBuffer类功能基本相似，主要区别在于StringBuffer类的方法是多线程、安全的，而 StringBuilder不是线程安全的，相比而言，StringBuilder类会略微快一点。对于经常要改变值的字符串应该使用<br>StringBuffer和StringBuilder类。 </p>
 <h3 id="4-线程安全"><a href="#4-线程安全" class="headerlink" title="4.线程安全"></a>4.线程安全</h3><p>StringBuffer 线程安全<br>StringBuilder 线程不安全</p>
 <h3 id="5-速度"><a href="#5-速度" class="headerlink" title="5.速度"></a>5.速度</h3><p>一般情况下,速度从快到慢:StringBuilder&gt;StringBuffer&gt;String,这种比较是相对的，不是绝对的。</p>
@@ -698,7 +698,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -725,7 +725,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -784,7 +796,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

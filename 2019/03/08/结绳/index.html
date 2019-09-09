@@ -147,19 +147,19 @@
 
 
 
-  <meta name="description" content="思路： 绳子每进行一次连接就要对折一次，长度就会减少一半，那么应该让较长的绳子尽量少对折。按照这样的想法，那么应该将绳子从小到大排列，两两进行串连。 所以每次选取最小得绳子和第二小得绳子进行对折即可。 代码v1.0: 12345678910111213141516171819202122232425262728import java.util.ArrayList;import java.uti">
+  <meta name="description" content="思路： 绳子每进行一次连接就要对折一次，长度就会减少一半，那么应该让较长的绳子尽量少对折。按照这样的想法，那么应该将绳子从小到大排列，两两进行串连。 所以每次选取最小得绳子和第二小得绳子进行对折即可。 代码v1.0: import java.util.ArrayList;import java.util.Collections;import java.util.List;import java">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="结绳">
 <meta property="og:url" content="http://xiegangyouth.github.io/2019/03/08/结绳/index.html">
 <meta property="og:site_name" content="Slash Youth">
-<meta property="og:description" content="思路： 绳子每进行一次连接就要对折一次，长度就会减少一半，那么应该让较长的绳子尽量少对折。按照这样的想法，那么应该将绳子从小到大排列，两两进行串连。 所以每次选取最小得绳子和第二小得绳子进行对折即可。 代码v1.0: 12345678910111213141516171819202122232425262728import java.util.ArrayList;import java.uti">
+<meta property="og:description" content="思路： 绳子每进行一次连接就要对折一次，长度就会减少一半，那么应该让较长的绳子尽量少对折。按照这样的想法，那么应该将绳子从小到大排列，两两进行串连。 所以每次选取最小得绳子和第二小得绳子进行对折即可。 代码v1.0: import java.util.ArrayList;import java.util.Collections;import java.util.List;import java">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/03/08/5c824b0744eab.png">
 <meta property="og:updated_time" content="2019-03-08T11:03:30.152Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="结绳">
-<meta name="twitter:description" content="思路： 绳子每进行一次连接就要对折一次，长度就会减少一半，那么应该让较长的绳子尽量少对折。按照这样的想法，那么应该将绳子从小到大排列，两两进行串连。 所以每次选取最小得绳子和第二小得绳子进行对折即可。 代码v1.0: 12345678910111213141516171819202122232425262728import java.util.ArrayList;import java.uti">
+<meta name="twitter:description" content="思路： 绳子每进行一次连接就要对折一次，长度就会减少一半，那么应该让较长的绳子尽量少对折。按照这样的想法，那么应该将绳子从小到大排列，两两进行串连。 所以每次选取最小得绳子和第二小得绳子进行对折即可。 代码v1.0: import java.util.ArrayList;import java.util.Collections;import java.util.List;import java">
 <meta name="twitter:image" content="https://i.loli.net/2019/03/08/5c824b0744eab.png">
 
 
@@ -552,7 +552,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/03/08/5c824b0744eab.png" rel="gallery_ck0cfeb8o002fi4wg0gha1482" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/03/08/5c824b0744eab.png" rel="gallery_ck0cfq5ub0025iwwg31df7gp1" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2019/03/08/5c824b0744eab.png" itemprop="contentUrl">
               </a>
             
@@ -570,11 +570,11 @@
 <p>绳子每进行一次连接就要对折一次，长度就会减少一半，那么应该让较长的绳子尽量少对折。按照这样的想法，那么应该将绳子从小到大排列，两两进行串连。</p>
 <p>所以每次选取最小得绳子和第二小得绳子进行对折即可。</p>
 <p><strong>代码v1.0:</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">int</span> N = in.nextInt();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">			list.add(in.nextInt());</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> max = f(list);</span><br><span class="line">		System.out.println(max);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">(List&lt;Integer&gt; list)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (list.size() == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> list.get(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		Collections.sort(list);</span><br><span class="line">		list.add((list.get(<span class="number">1</span>) + list.get(<span class="number">0</span>)) / <span class="number">2</span>);</span><br><span class="line">		List&lt;Integer&gt; list2 = list.subList(<span class="number">2</span>, list.size());</span><br><span class="line">		<span class="keyword">return</span> f(list2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">int</span> N = in.nextInt();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">			list.add(in.nextInt());</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> max = f(list);</span><br><span class="line">		System.out.println(max);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">f</span><span class="params">(List&lt;Integer&gt; list)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (list.size() == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">return</span> list.get(<span class="number">0</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		Collections.sort(list);</span><br><span class="line">		list.add((list.get(<span class="number">1</span>) + list.get(<span class="number">0</span>)) / <span class="number">2</span>);</span><br><span class="line">		List&lt;Integer&gt; list2 = list.subList(<span class="number">2</span>, list.size());</span><br><span class="line">		<span class="keyword">return</span> f(list2);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>思考：</strong>首先对绳子的长度进行排序，取最短的两根绳子a、b，对折，<strong>对折后的长度一定不会超过这两根绳子的最大长度</strong>，所有不需要担心打乱顺序。只需要一次排序就行。</p>
 <p> <img src="https://i.loli.net/2019/03/08/5c824bf2c8f1b.jpg" alt="1.jpg"></p>
 <p><strong>代码v2.0:</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">int</span> N = in.nextInt();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">			list.add(in.nextInt());</span><br><span class="line">		&#125;</span><br><span class="line">		Collections.sort(list);</span><br><span class="line">		<span class="keyword">int</span> result=list.get(<span class="number">0</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;list.size();i++) &#123;</span><br><span class="line">			result=(result+list.get(i))/<span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(result);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Collections;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		ArrayList&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		<span class="keyword">int</span> N = in.nextInt();</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">			list.add(in.nextInt());</span><br><span class="line">		&#125;</span><br><span class="line">		Collections.sort(list);</span><br><span class="line">		<span class="keyword">int</span> result=list.get(<span class="number">0</span>);</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;list.size();i++) &#123;</span><br><span class="line">			result=(result+list.get(i))/<span class="number">2</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(result);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -691,7 +691,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -718,7 +718,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -777,7 +789,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

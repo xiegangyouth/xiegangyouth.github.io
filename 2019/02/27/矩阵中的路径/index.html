@@ -548,7 +548,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/27/5c7696b93ed4e.png" rel="gallery_ck0cfeb81001ji4wgujpvgpxr" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/27/5c7696b93ed4e.png" rel="gallery_ck0cfq5tw001kiwwgpkjra708" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2019/02/27/5c7696b93ed4e.png" itemprop="contentUrl">
               </a>
             
@@ -582,7 +582,7 @@
 <li>若上下左右四个格子中的某一个格子符合1、2、3三点要求，则重复4；</li>
 <li>当待判定的字符串已经判断到了最后一个字符，说明成功找到路径。</li>
 </ol>
-<h3 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">hasPath</span><span class="params">(<span class="keyword">char</span>[] matrix, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols, <span class="keyword">char</span>[] str)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建一个与matrix同长度的标志数组，默认赋值false,若该格子已经被走过，则赋值true</span></span><br><span class="line">		<span class="keyword">boolean</span>[] flag = <span class="keyword">new</span> <span class="keyword">boolean</span>[matrix.length];</span><br><span class="line">        <span class="comment">//遍历矩阵中的每一个格子</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; rows; x++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; cols; y++) &#123;</span><br><span class="line"><span class="comment">//find()：循环遍历矩阵格子，找到起点等于str第一个元素的值，再递归判断四周是否有符合条件的----回溯法</span></span><br><span class="line">				<span class="keyword">if</span>(find(matrix, x, y, flag, str, <span class="number">0</span>, rows, cols)) &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//x、y：当前格子的横纵坐标  k:str中正在进行匹配的第k+1个字符（str[k])</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span>  <span class="keyword">boolean</span> <span class="title">find</span><span class="params">(<span class="keyword">char</span>[] matrix, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">boolean</span>[] flag, <span class="keyword">char</span>[] str, <span class="keyword">int</span> k, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">if</span>(k==str.length-<span class="number">1</span>) &#123;<span class="comment">//当待判定的字符串已经判断到了最后一个字符，说明成功找到路径</span></span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> index=x*cols+y;<span class="comment">//通过当前格子的横纵坐标求出该格子在matrix中对应下标</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        若 横纵坐标超出合理范围 或者 当前格子≠str[k] 或者 当前格子被走过 都表示当前格子不可用，		    返回false，返回至hasPath方法继续寻找矩阵中第二个起点等于str第一个元素的值</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">		<span class="keyword">if</span>(x&lt;<span class="number">0</span>||y&lt;<span class="number">0</span>||x&gt;=rows||y&gt;=cols||str[k]!=matrix[index]||flag[index]) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">			flag[index]=<span class="keyword">true</span>;<span class="comment">//当前格子可走,将标志数组对应元素赋值为true，表示以及走过</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//对 当前格子的上下左右四个格子的字符进行判断，寻找与str[k+1]相匹配的第二个格子</span></span><br><span class="line">			<span class="keyword">if</span>(find(matrix, x-<span class="number">1</span>, y, flag, str, k+<span class="number">1</span>, rows, cols)||</span><br><span class="line">			   find(matrix, x+<span class="number">1</span>, y, flag, str, k+<span class="number">1</span>, rows, cols)||</span><br><span class="line">			   find(matrix, x, y-<span class="number">1</span>, flag, str, k+<span class="number">1</span>, rows, cols)||</span><br><span class="line">			   find(matrix, x, y+<span class="number">1</span>, flag, str, k+<span class="number">1</span>, rows, cols)) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">				flag[index]=<span class="keyword">false</span>;<span class="comment">//此路不通，将上面的true还原（回溯）</span></span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;<span class="comment">//返回false至hasPath方法，寻找其他路径</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="我的代码"><a href="#我的代码" class="headerlink" title="我的代码"></a>我的代码</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">  	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">boolean</span> <span class="title">hasPath</span><span class="params">(<span class="keyword">char</span>[] matrix, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols, <span class="keyword">char</span>[] str)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//创建一个与matrix同长度的标志数组，默认赋值false,若该格子已经被走过，则赋值true</span></span><br><span class="line">		<span class="keyword">boolean</span>[] flag = <span class="keyword">new</span> <span class="keyword">boolean</span>[matrix.length];</span><br><span class="line">        <span class="comment">//遍历矩阵中的每一个格子</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> x = <span class="number">0</span>; x &lt; rows; x++) &#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> y = <span class="number">0</span>; y &lt; cols; y++) &#123;</span><br><span class="line"><span class="comment">//find()：循环遍历矩阵格子，找到起点等于str第一个元素的值，再递归判断四周是否有符合条件的----回溯法</span></span><br><span class="line">				<span class="keyword">if</span>(find(matrix, x, y, flag, str, <span class="number">0</span>, rows, cols)) &#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">//x、y：当前格子的横纵坐标  k:str中正在进行匹配的第k+1个字符（str[k])</span></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span>  <span class="keyword">boolean</span> <span class="title">find</span><span class="params">(<span class="keyword">char</span>[] matrix, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">boolean</span>[] flag, <span class="keyword">char</span>[] str, <span class="keyword">int</span> k, <span class="keyword">int</span> rows, <span class="keyword">int</span> cols)</span> </span>&#123;</span><br><span class="line">         <span class="keyword">if</span>(k==str.length-<span class="number">1</span>) &#123;<span class="comment">//当待判定的字符串已经判断到了最后一个字符，说明成功找到路径</span></span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> index=x*cols+y;<span class="comment">//通过当前格子的横纵坐标求出该格子在matrix中对应下标</span></span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">        若 横纵坐标超出合理范围 或者 当前格子≠str[k] 或者 当前格子被走过 都表示当前格子不可用，		    返回false，返回至hasPath方法继续寻找矩阵中第二个起点等于str第一个元素的值</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">		<span class="keyword">if</span>(x&lt;<span class="number">0</span>||y&lt;<span class="number">0</span>||x&gt;=rows||y&gt;=cols||str[k]!=matrix[index]||flag[index]) &#123;</span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">		&#125;</span><br><span class="line">			flag[index]=<span class="keyword">true</span>;<span class="comment">//当前格子可走,将标志数组对应元素赋值为true，表示以及走过</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//对 当前格子的上下左右四个格子的字符进行判断，寻找与str[k+1]相匹配的第二个格子</span></span><br><span class="line">			<span class="keyword">if</span>(find(matrix, x-<span class="number">1</span>, y, flag, str, k+<span class="number">1</span>, rows, cols)||</span><br><span class="line">			   find(matrix, x+<span class="number">1</span>, y, flag, str, k+<span class="number">1</span>, rows, cols)||</span><br><span class="line">			   find(matrix, x, y-<span class="number">1</span>, flag, str, k+<span class="number">1</span>, rows, cols)||</span><br><span class="line">			   find(matrix, x, y+<span class="number">1</span>, flag, str, k+<span class="number">1</span>, rows, cols)) &#123;</span><br><span class="line">				<span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">			&#125;</span><br><span class="line">				flag[index]=<span class="keyword">false</span>;<span class="comment">//此路不通，将上面的true还原（回溯）</span></span><br><span class="line">			<span class="keyword">return</span> <span class="keyword">false</span>;<span class="comment">//返回false至hasPath方法，寻找其他路径</span></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -710,7 +710,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -737,7 +737,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -796,7 +808,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

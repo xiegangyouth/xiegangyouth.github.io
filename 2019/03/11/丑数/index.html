@@ -548,7 +548,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/03/11/5c8667da78941.png" rel="gallery_ck0cfeb6x000ai4wg0r4w0z93" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/03/11/5c8667da78941.png" rel="gallery_ck0cfq5t1000eiwwgmaj7gbon" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2019/03/11/5c8667da78941.png" itemprop="contentUrl">
               </a>
             
@@ -639,7 +639,7 @@
 </li>
 </ul>
 </blockquote>
-<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> N=in.nextInt();</span><br><span class="line">		<span class="keyword">int</span> num=GetUglyNumber_Solution(N);</span><br><span class="line">		System.out.println(num);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">int</span> <span class="title">GetUglyNumber_Solution</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(N&lt;=<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		List&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		list.add(<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">int</span> i1=<span class="number">0</span>,i2=<span class="number">0</span>,i3=<span class="number">0</span>;<span class="comment">//3个记录指针</span></span><br><span class="line">		<span class="keyword">while</span>(list.size()&lt;N) &#123;</span><br><span class="line">			<span class="keyword">int</span> n1=list.get(i1)*<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">int</span> n2=list.get(i2)*<span class="number">3</span>;</span><br><span class="line">			<span class="keyword">int</span> n3=list.get(i3)*<span class="number">5</span>;</span><br><span class="line">			<span class="keyword">int</span> min=Math.min(n1, Math.min(n2, n3));</span><br><span class="line">			list.add(min);</span><br><span class="line">			<span class="keyword">if</span>(min==n1) &#123;</span><br><span class="line">				i1++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(min==n2) &#123;</span><br><span class="line">				i2++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(min==n3) &#123;</span><br><span class="line">				i3++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">return</span> list.get(N-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> N=in.nextInt();</span><br><span class="line">		<span class="keyword">int</span> num=GetUglyNumber_Solution(N);</span><br><span class="line">		System.out.println(num);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span>  <span class="keyword">int</span> <span class="title">GetUglyNumber_Solution</span><span class="params">(<span class="keyword">int</span> N)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span>(N&lt;=<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		List&lt;Integer&gt; list=<span class="keyword">new</span> ArrayList&lt;Integer&gt;();</span><br><span class="line">		list.add(<span class="number">1</span>);</span><br><span class="line">		<span class="keyword">int</span> i1=<span class="number">0</span>,i2=<span class="number">0</span>,i3=<span class="number">0</span>;<span class="comment">//3个记录指针</span></span><br><span class="line">		<span class="keyword">while</span>(list.size()&lt;N) &#123;</span><br><span class="line">			<span class="keyword">int</span> n1=list.get(i1)*<span class="number">2</span>;</span><br><span class="line">			<span class="keyword">int</span> n2=list.get(i2)*<span class="number">3</span>;</span><br><span class="line">			<span class="keyword">int</span> n3=list.get(i3)*<span class="number">5</span>;</span><br><span class="line">			<span class="keyword">int</span> min=Math.min(n1, Math.min(n2, n3));</span><br><span class="line">			list.add(min);</span><br><span class="line">			<span class="keyword">if</span>(min==n1) &#123;</span><br><span class="line">				i1++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(min==n2) &#123;</span><br><span class="line">				i2++;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span>(min==n3) &#123;</span><br><span class="line">				i3++;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="keyword">return</span> list.get(N-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>运行时间：26ms</p>
 <p>占用内存：9468k</p>
@@ -770,7 +770,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -797,7 +797,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -856,7 +868,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -147,19 +147,19 @@
 
 
 
-  <meta name="description" content="已知两个数x和y，求x和y的最大公约数 暴力循环求解： 12345678910111213public static void gcd(int x, int y) &amp;#123;	if (y &amp;gt; x) &amp;#123;//如果y&amp;gt;x，交换x与y		int t = x;		x = y;		y = t;	&amp;#125;	for (int i = y; i &amp;gt; 0; i--) &amp;#123;">
+  <meta name="description" content="已知两个数x和y，求x和y的最大公约数 暴力循环求解： public static void gcd(int x, int y) &amp;#123;	if (y &amp;gt; x) &amp;#123;//如果y&amp;gt;x，交换x与y		int t = x;		x = y;		y = t;	&amp;#125;	for (int i = y; i &amp;gt; 0; i--) &amp;#123;		if (x % i == 0 &amp;a">
 <meta name="keywords" content="Java,辗转相除法,最大公约数,最小公倍数">
 <meta property="og:type" content="article">
 <meta property="og:title" content="最大公约数与最小公倍数：辗转相除法">
 <meta property="og:url" content="http://xiegangyouth.github.io/2019/02/27/最大公约数与最小公倍数：辗转相除法/index.html">
 <meta property="og:site_name" content="Slash Youth">
-<meta property="og:description" content="已知两个数x和y，求x和y的最大公约数 暴力循环求解： 12345678910111213public static void gcd(int x, int y) &amp;#123;	if (y &amp;gt; x) &amp;#123;//如果y&amp;gt;x，交换x与y		int t = x;		x = y;		y = t;	&amp;#125;	for (int i = y; i &amp;gt; 0; i--) &amp;#123;">
+<meta property="og:description" content="已知两个数x和y，求x和y的最大公约数 暴力循环求解： public static void gcd(int x, int y) &amp;#123;	if (y &amp;gt; x) &amp;#123;//如果y&amp;gt;x，交换x与y		int t = x;		x = y;		y = t;	&amp;#125;	for (int i = y; i &amp;gt; 0; i--) &amp;#123;		if (x % i == 0 &amp;a">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://i.loli.net/2019/02/27/5c763f3c72240.png">
-<meta property="og:updated_time" content="2019-02-27T07:42:07.452Z">
+<meta property="og:updated_time" content="2019-09-09T13:20:12.821Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="最大公约数与最小公倍数：辗转相除法">
-<meta name="twitter:description" content="已知两个数x和y，求x和y的最大公约数 暴力循环求解： 12345678910111213public static void gcd(int x, int y) &amp;#123;	if (y &amp;gt; x) &amp;#123;//如果y&amp;gt;x，交换x与y		int t = x;		x = y;		y = t;	&amp;#125;	for (int i = y; i &amp;gt; 0; i--) &amp;#123;">
+<meta name="twitter:description" content="已知两个数x和y，求x和y的最大公约数 暴力循环求解： public static void gcd(int x, int y) &amp;#123;	if (y &amp;gt; x) &amp;#123;//如果y&amp;gt;x，交换x与y		int t = x;		x = y;		y = t;	&amp;#125;	for (int i = y; i &amp;gt; 0; i--) &amp;#123;		if (x % i == 0 &amp;a">
 <meta name="twitter:image" content="https://i.loli.net/2019/02/27/5c763f3c72240.png">
 
 
@@ -477,6 +477,22 @@
             
 
             
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-09-09 13:20:12" itemprop="dateModified" datetime="2019-09-09T13:20:12Z">2019-09-09</time>
+              
+            
           </span>
 
           
@@ -491,7 +507,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/每日一道编程题/" itemprop="url" rel="index"><span itemprop="name">每日一道编程题</span></a></span>
 
                 
                 
@@ -548,7 +564,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/27/5c763f3c72240.png" rel="gallery_ck0cfeb7l0010i4wgg45knwh5" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/27/5c763f3c72240.png" rel="gallery_ck0cfq5tl0011iwwgu75hrtrh" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2019/02/27/5c763f3c72240.png" itemprop="contentUrl">
               </a>
             
@@ -562,11 +578,11 @@
       
         <p><strong>已知两个数x和y，求x和y的最大公约数</strong></p>
 <p><strong>暴力循环求解：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (y &gt; x) &#123;<span class="comment">//如果y&gt;x，交换x与y</span></span><br><span class="line">		<span class="keyword">int</span> t = x;</span><br><span class="line">		x = y;</span><br><span class="line">		y = t;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = y; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">if</span> (x % i == <span class="number">0</span> &amp;&amp; y % i == <span class="number">0</span>) &#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (y &gt; x) &#123;<span class="comment">//如果y&gt;x，交换x与y</span></span><br><span class="line">		<span class="keyword">int</span> t = x;</span><br><span class="line">		x = y;</span><br><span class="line">		y = t;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = y; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">		<span class="keyword">if</span> (x % i == <span class="number">0</span> &amp;&amp; y % i == <span class="number">0</span>) &#123;</span><br><span class="line">			System.out.println(i);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>辗转相除法求解：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span>(y==<span class="number">0</span>) &#123;</span><br><span class="line">			System.out.println(x);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> t=y;</span><br><span class="line">		y=x%y;</span><br><span class="line">		x=t;	</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span>(<span class="keyword">true</span>) &#123;</span><br><span class="line">		<span class="keyword">if</span>(y==<span class="number">0</span>) &#123;</span><br><span class="line">			System.out.println(x);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">int</span> t=y;</span><br><span class="line">		y=x%y;</span><br><span class="line">		x=t;	</span><br><span class="line">	&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>辗转相除法递归求解：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (y == <span class="number">0</span>) &#123;</span><br><span class="line">		System.out.println(x);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	gcd(y, x % y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (y == <span class="number">0</span>) &#123;</span><br><span class="line">		System.out.println(x);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	gcd(y, x % y);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong><font color="red">理解辗转相除法：</font></strong></p>
 <p><img src="https://i.loli.net/2019/02/27/5c761dc622b74.png" alt="理解最大公约数.png"></p>
 <hr>
@@ -574,10 +590,10 @@
 <p>【定理】：两个数的乘积等于这两个数的最大公约数与最小公倍数的积，即（a，b）×[a，b]=a×b，a，b的最大公约数记为（a，b），a，b的最小公倍数记为[a，b]。</p>
 <p>所以<strong><font color="red">[a，b]=a×b / (a，b)</font></strong></p>
 <p><strong>两个数的最小公倍数求解：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> x = in.nextInt();</span><br><span class="line">		<span class="keyword">int</span> y = in.nextInt();</span><br><span class="line">		System.out.println(lcm(x, y));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lcm</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;<span class="comment">//求两个数的最小公倍数</span></span><br><span class="line">		<span class="keyword">return</span> (x*y)/gcd(x,y);	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (y == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> x;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> gcd(y, x % y);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">		<span class="keyword">int</span> x = in.nextInt();</span><br><span class="line">		<span class="keyword">int</span> y = in.nextInt();</span><br><span class="line">		System.out.println(lcm(x, y));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lcm</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;<span class="comment">//求两个数的最小公倍数</span></span><br><span class="line">		<span class="keyword">return</span> (x*y)/gcd(x,y);	</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (y == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> x;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> gcd(y, x % y);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <hr>
 <p><strong>求多个数的最大公约数和最小公倍数：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] nums = &#123; <span class="number">27</span>, <span class="number">18</span>, <span class="number">9</span>, <span class="number">81</span> &#125;;</span><br><span class="line">		System.out.println(<span class="string">"最大公约数："</span> + gcdMore(nums, <span class="number">3</span>));</span><br><span class="line">		System.out.println(<span class="string">"最小公倍数："</span> + lcmMore(nums, <span class="number">3</span>));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (y == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> x;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> gcd(y, x % y);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lcm</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;<span class="comment">// 求两个数的最小公倍数</span></span><br><span class="line">		<span class="keyword">return</span> (x * y) / gcd(x, y);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcdMore</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> n)</span> </span>&#123;<span class="comment">// 求多个数的最大公约数</span></span><br><span class="line">		<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> nums[n - <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">return</span> gcd(nums[n - <span class="number">1</span>], gcdMore(nums, n - <span class="number">1</span>));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lcmMore</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> n)</span> </span>&#123;<span class="comment">// 求多个数的最小公倍数</span></span><br><span class="line">		<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> nums[n - <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">return</span> lcm(nums[n - <span class="number">1</span>], lcmMore(nums, n - <span class="number">1</span>));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">int</span>[] nums = &#123; <span class="number">27</span>, <span class="number">18</span>, <span class="number">9</span>, <span class="number">81</span> &#125;;</span><br><span class="line">		System.out.println(<span class="string">"最大公约数："</span> + gcdMore(nums, <span class="number">3</span>));</span><br><span class="line">		System.out.println(<span class="string">"最小公倍数："</span> + lcmMore(nums, <span class="number">3</span>));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (y == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> x;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">return</span> gcd(y, x % y);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lcm</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;<span class="comment">// 求两个数的最小公倍数</span></span><br><span class="line">		<span class="keyword">return</span> (x * y) / gcd(x, y);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">gcdMore</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> n)</span> </span>&#123;<span class="comment">// 求多个数的最大公约数</span></span><br><span class="line">		<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> nums[n - <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">return</span> gcd(nums[n - <span class="number">1</span>], gcdMore(nums, n - <span class="number">1</span>));</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">lcmMore</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> n)</span> </span>&#123;<span class="comment">// 求多个数的最小公倍数</span></span><br><span class="line">		<span class="keyword">if</span> (n == <span class="number">1</span>)</span><br><span class="line">			<span class="keyword">return</span> nums[n - <span class="number">1</span>];</span><br><span class="line">		<span class="keyword">return</span> lcm(nums[n - <span class="number">1</span>], lcmMore(nums, n - <span class="number">1</span>));</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>讲解：</strong></p>
 <blockquote>
 <ol>
@@ -709,7 +725,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -736,7 +752,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -795,7 +823,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

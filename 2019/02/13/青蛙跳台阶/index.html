@@ -552,7 +552,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/13/5c63abe99fa42.png" rel="gallery_ck0cfebaz004ki4wgnud6kx63" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/02/13/5c63abe99fa42.png" rel="gallery_ck0cfq5vv004biwwggt5s7hqm" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="https://i.loli.net/2019/02/13/5c63abe99fa42.png" itemprop="contentUrl">
               </a>
             
@@ -586,7 +586,7 @@
 <p><img src="https://i.loli.net/2019/02/13/5c639977cb0ac.png" alt></p>
 <hr>
 <p><strong>我的代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">JumpFloor</span><span class="params">(<span class="keyword">int</span> target)</span> </span>&#123;<span class="comment">//target为台阶总数</span></span><br><span class="line">        <span class="keyword">if</span>(target==<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(target==<span class="number">1</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(target&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> JumpFloor(target-<span class="number">1</span>)+JumpFloor(target-<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">JumpFloor</span><span class="params">(<span class="keyword">int</span> target)</span> </span>&#123;<span class="comment">//target为台阶总数</span></span><br><span class="line">        <span class="keyword">if</span>(target==<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(target==<span class="number">1</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(target&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> JumpFloor(target-<span class="number">1</span>)+JumpFloor(target-<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>运行时间：544ms</p>
 <p>占用内存：9056 k</p>
@@ -594,7 +594,7 @@
 <hr>
 <p><strong>改进：</strong></p>
 <p><strong>为避免递归产生的栈溢出，改用自底向上的动态规划（迭代）来解题：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">JumpFloor</span><span class="params">(<span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(target==<span class="number">2</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span>(target==<span class="number">1</span>)&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span>(target&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">int</span> first = <span class="number">1</span>, second = <span class="number">2</span>, third = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= target; i++) &#123;</span><br><span class="line">           third = first + second;</span><br><span class="line">           first = second;</span><br><span class="line">           second = third;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> third;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">JumpFloor</span><span class="params">(<span class="keyword">int</span> target)</span> </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(target==<span class="number">2</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span>(target==<span class="number">1</span>)&#123;</span><br><span class="line">          <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span>(target&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">           <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">int</span> first = <span class="number">1</span>, second = <span class="number">2</span>, third = <span class="number">0</span>;</span><br><span class="line">       <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">3</span>; i &lt;= target; i++) &#123;</span><br><span class="line">           third = first + second;</span><br><span class="line">           first = second;</span><br><span class="line">           second = third;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">return</span> third;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>运行时间：15ms</p>
 <p>占用内存：9328 k</p>
@@ -640,8 +640,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/09/动态规划：斐波那契数列/" rel="next" title="动态规划：斐波那契数列">
-                <i class="fa fa-chevron-left"></i> 动态规划：斐波那契数列
+              <a href="/2019/02/12/不要自称为程序员/" rel="next" title="不要自称为程序员">
+                <i class="fa fa-chevron-left"></i> 不要自称为程序员
               </a>
             
           </div>
@@ -719,7 +719,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">49</span>
+                    <span class="site-state-item-count">62</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -746,7 +746,19 @@
                     
                       
                     
-                    <span class="site-state-item-count">7</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -805,7 +817,23 @@
                     
                       
                     
-                    <span class="site-state-item-count">23</span>
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">31</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
