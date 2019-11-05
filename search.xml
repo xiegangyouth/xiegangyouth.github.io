@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[求以“孩子-兄弟链表表示的树”的度]]></title>
+    <url>%2F2019%2F11%2F05%2F%E6%B1%82%E4%BB%A5%E2%80%9C%E5%AD%A9%E5%AD%90-%E5%85%84%E5%BC%9F%E9%93%BE%E8%A1%A8%E8%A1%A8%E7%A4%BA%E7%9A%84%E6%A0%91%E2%80%9D%E7%9A%84%E5%BA%A6%2F</url>
+    <content type="text"><![CDATA[写在前面结点的度：结点的子树个数 树的度：树中各个结点的度的最大值 算法思想 定义一个容量足够大的队列，存放结点指针，基于层次遍历的算法思想遍历树中各结点，定义临时变量max，n，max用于记录当前已访问结点度的最大值，n记录当前结点的度： ·若当前结点p为空，则返回度数为0； ·否则，将当前结点p入队，n置为0。若p存在孩子结点，访问第一个孩子结点，同时p的度数加一（n++）,将孩子结点入队，继续访问p的剩余孩子结点，每访问一个孩子结点，度数加一。 核心代码int getMax(Tree T)&#123; if(T==NULL) return 0; Node *Q[MaxSize],*p,*q;//定义一个容量足够大的队列，存放结点指针 int front=-1,rear=-1;//初始化队列为空 int max=0,n=-1;//max记录当前已访问结点度的最大值，n记录当前结点的度 Q[++rear]=T;//根结点入队 while(front&lt;rear)&#123; p=Q[++front];//队头元素出队 n=0;//即将开始遍历子树，此时当前结点度为0 q=p-&gt;firstchild;//q指向p的第一个孩子 while(q!=NULL)&#123; n++;//度+1 Q[++rear]=q;//孩子结点入队 q=q-&gt;nextsibling;//遍历孩子的兄弟结点（即将p所有孩子入队） &#125; max=n&gt;max?n:max;//更新当前已访问结点度的最大值 &#125; return max;&#125; 运行结果]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>二叉树</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[计算二叉树深度（高度）]]></title>
     <url>%2F2019%2F09%2F09%2F%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%EF%BC%9A%E8%AE%A1%E7%AE%97%E4%BA%8C%E5%8F%89%E6%A0%91%E9%AB%98%E5%BA%A6%2F</url>
     <content type="text"><![CDATA[递归算法算法思想： 当二叉树为空时，深度为0； 当二叉树只有根结点时（即左、右子树均为空），深度为1； 其他情况，求二叉树的左、右子树高度的较大值+1（根结点），即为二叉树深度。 公式如下： 核心代码：int BtreeDepth(Btree T)&#123; int DL,DR,MAX; if(T==NULL)&#123; return 0; &#125; DL=BtreeDepth(T-&gt;lchild); DR=BtreeDepth(T-&gt;rchild); MAX=DL&gt;DR?DL:DR; return MAX+1;&#125; 非递归算法算法思想：利用层次遍历的思想。主要思想是：一层一层地出队列。在每次访问完毕一层时，这时队列中存储的刚好是下一层所有的元素 。设置一个工作结点指针last，在当前层访问完毕时指向下一层的最右结点（当前层访问完毕时队列中队尾结点），每次层次遍历出队时将出队结点与last进行比较，若二者相等，表明一层访问完毕，层数加一，并让last指向下一层的最右结点，直至遍历结束。 核心代码int BtreeDepth(Btree T)&#123; if(T==NULL)&#123;//树空，则高度为0 return 0; &#125; Btree *Q[MaxSize],*p;//定义一个元素为二叉树结点且容量足够的队列 int front=-1,rear=-1;//初始时刻队列为空 int last=0,level=0;//last指向下一层的最右结点 Q[++rear]=T;//根结点入队 while(front&lt;rear)&#123; p=Q[++front];//队头元素出队/*若当前结点为最右结点：当前层遍历完毕，层数+1，并奖last指向下一层最右结点*/ if(front==last)&#123; level++; last=rear; &#125;/*层次遍历：左孩子入队*/ if(p-&gt;lchild)&#123; Q[++rear]=p-&gt;lchild; &#125;/*层次遍历：右孩子入队*/ if(p-&gt;rchild)&#123; Q[++rear]=p-&gt;rchild; &#125; &#125; return level;&#125; 拓展 计算二叉树的宽度：即求结点个数最多的那一层的结点个数，在上述非递归算法中记录层间元素最大值即可； 计算二叉树的最小高度：与非递归计算高度类似，不同之处在于若在当前层遇有叶子结点则立即停止遍历，该层即为最小高度。]]></content>

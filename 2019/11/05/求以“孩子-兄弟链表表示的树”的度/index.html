@@ -147,27 +147,27 @@
 
 
 
-  <meta name="description" content="1.基本求导公式： 2.四则运算法则： 复合函数的求导法则  3.反函数的求导法则：反函数定义：  反函数求导法则:  画图证明： 4.幂指函数求导法则：    5.隐函数求导法则： 6.参数方程求导法则： 7.高阶导数求导法则：  [注]：前两条与求一阶导公式一致，但第三条与求一阶导有所不同。 常见的几个函数的n阶导：  例题：">
-<meta name="keywords" content="高等数学,考研复习,高昆轮">
+  <meta name="description" content="写在前面结点的度：结点的子树个数 树的度：树中各个结点的度的最大值 算法思想 定义一个容量足够大的队列，存放结点指针，基于层次遍历的算法思想遍历树中各结点，定义临时变量max，n，max用于记录当前已访问结点度的最大值，n记录当前结点的度： ·若当前结点p为空，则返回度数为0； ·否则，将当前结点p入队，n置为0。若p存在孩子结点，访问第一个孩子结点，同时p的度数加一（n++）,将孩子结点入队，继">
+<meta name="keywords" content="二叉树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="零基础学高数009：导数与微分的计算">
-<meta property="og:url" content="http://xiegangyouth.github.io/2019/03/04/零基础学高数009：导数与微分的计算/index.html">
+<meta property="og:title" content="求以“孩子-兄弟链表表示的树”的度">
+<meta property="og:url" content="http://xiegangyouth.github.io/2019/11/05/求以“孩子-兄弟链表表示的树”的度/index.html">
 <meta property="og:site_name" content="Slash Youth">
-<meta property="og:description" content="1.基本求导公式： 2.四则运算法则： 复合函数的求导法则  3.反函数的求导法则：反函数定义：  反函数求导法则:  画图证明： 4.幂指函数求导法则：    5.隐函数求导法则： 6.参数方程求导法则： 7.高阶导数求导法则：  [注]：前两条与求一阶导公式一致，但第三条与求一阶导有所不同。 常见的几个函数的n阶导：  例题：">
+<meta property="og:description" content="写在前面结点的度：结点的子树个数 树的度：树中各个结点的度的最大值 算法思想 定义一个容量足够大的队列，存放结点指针，基于层次遍历的算法思想遍历树中各结点，定义临时变量max，n，max用于记录当前已访问结点度的最大值，n记录当前结点的度： ·若当前结点p为空，则返回度数为0； ·否则，将当前结点p入队，n置为0。若p存在孩子结点，访问第一个孩子结点，同时p的度数加一（n++）,将孩子结点入队，继">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.loli.net/2019/03/05/5c7de836578a2.png">
-<meta property="og:updated_time" content="2019-09-09T13:25:47.046Z">
+<meta property="og:image" content="https://i.loli.net/2019/11/05/4NJqSXbyOurIovD.png">
+<meta property="og:updated_time" content="2019-11-05T13:50:25.103Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="零基础学高数009：导数与微分的计算">
-<meta name="twitter:description" content="1.基本求导公式： 2.四则运算法则： 复合函数的求导法则  3.反函数的求导法则：反函数定义：  反函数求导法则:  画图证明： 4.幂指函数求导法则：    5.隐函数求导法则： 6.参数方程求导法则： 7.高阶导数求导法则：  [注]：前两条与求一阶导公式一致，但第三条与求一阶导有所不同。 常见的几个函数的n阶导：  例题：">
-<meta name="twitter:image" content="https://i.loli.net/2019/03/05/5c7de836578a2.png">
+<meta name="twitter:title" content="求以“孩子-兄弟链表表示的树”的度">
+<meta name="twitter:description" content="写在前面结点的度：结点的子树个数 树的度：树中各个结点的度的最大值 算法思想 定义一个容量足够大的队列，存放结点指针，基于层次遍历的算法思想遍历树中各结点，定义临时变量max，n，max用于记录当前已访问结点度的最大值，n记录当前结点的度： ·若当前结点p为空，则返回度数为0； ·否则，将当前结点p入队，n置为0。若p存在孩子结点，访问第一个孩子结点，同时p的度数加一（n++）,将孩子结点入队，继">
+<meta name="twitter:image" content="https://i.loli.net/2019/11/05/4NJqSXbyOurIovD.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://xiegangyouth.github.io/2019/03/04/零基础学高数009：导数与微分的计算/">
+  <link rel="canonical" href="http://xiegangyouth.github.io/2019/11/05/求以“孩子-兄弟链表表示的树”的度/">
 
 
 
@@ -177,7 +177,7 @@
   };
 </script>
 
-  <title>零基础学高数009：导数与微分的计算 | Slash Youth</title>
+  <title>求以“孩子-兄弟链表表示的树”的度 | Slash Youth</title>
   
 
 
@@ -430,7 +430,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiegangyouth.github.io/2019/03/04/零基础学高数009：导数与微分的计算/">
+    <link itemprop="mainEntityOfPage" href="http://xiegangyouth.github.io/2019/11/05/求以“孩子-兄弟链表表示的树”的度/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="斜杠青年">
@@ -447,7 +447,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">零基础学高数009：导数与微分的计算
+          <h1 class="post-title" itemprop="name headline">求以“孩子-兄弟链表表示的树”的度
 
               
             
@@ -473,25 +473,9 @@
                 
               
 
-              <time title="创建时间：2019-03-04 11:51:04" itemprop="dateCreated datePublished" datetime="2019-03-04T11:51:04Z">2019-03-04</time>
+              <time title="创建时间：2019-11-05 13:50:25" itemprop="dateCreated datePublished" datetime="2019-11-05T13:50:25Z">2019-11-05</time>
             
 
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-09-09 13:25:47" itemprop="dateModified" datetime="2019-09-09T13:25:47Z">2019-09-09</time>
-              
             
           </span>
 
@@ -507,14 +491,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数学/" itemprop="url" rel="index"><span itemprop="name">数学</span></a></span>
-
-                
-                
-                  ，
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数学/考研/" itemprop="url" rel="index"><span itemprop="name">考研</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
 
                 
                 
@@ -529,8 +506,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/03/04/零基础学高数009：导数与微分的计算/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/03/04/零基础学高数009：导数与微分的计算/" itemprop="commentCount"></span>
+                <a href="/2019/11/05/求以“孩子-兄弟链表表示的树”的度/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/2019/11/05/求以“孩子-兄弟链表表示的树”的度/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -538,7 +515,7 @@
 
           
           
-            <span id="/2019/03/04/零基础学高数009：导数与微分的计算/" class="leancloud_visitors" data-flag-title="零基础学高数009：导数与微分的计算">
+            <span id="/2019/11/05/求以“孩子-兄弟链表表示的树”的度/" class="leancloud_visitors" data-flag-title="求以“孩子-兄弟链表表示的树”的度">
               <span class="post-meta-divider">|</span>
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -567,48 +544,17 @@
 
       
       
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="https://i.loli.net/2019/03/05/5c7de836578a2.png" rel="gallery_ck2lwy9hd003qkgwgptbs5oj3" itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://i.loli.net/2019/03/05/5c7de836578a2.png" itemprop="contentUrl">
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
 
       
-        <h3 id="1-基本求导公式："><a href="#1-基本求导公式：" class="headerlink" title="1.基本求导公式："></a>1.基本求导公式：</h3><p><img src="https://i.loli.net/2019/03/04/5c7d103327769.jpg" alt="1.jpg"></p>
-<h3 id="2-四则运算法则："><a href="#2-四则运算法则：" class="headerlink" title="2.四则运算法则："></a>2.四则运算法则：</h3><p><img src="https://i.loli.net/2019/03/04/5c7d1115958cc.jpg" alt="2w.jpg"></p>
-<h3 id="复合函数的求导法则"><a href="#复合函数的求导法则" class="headerlink" title="复合函数的求导法则"></a>复合函数的求导法则</h3><p> <img src="https://i.loli.net/2019/03/04/5c7d128a8b390.jpg" alt="Snipaste_2019-03-04_19-56-47.jpg"></p>
-<h3 id="3-反函数的求导法则："><a href="#3-反函数的求导法则：" class="headerlink" title="3.反函数的求导法则："></a>3.反函数的求导法则：</h3><p><strong>反函数定义：</strong></p>
-<p><img src="https://i.loli.net/2019/02/07/5c5b7fa35d6a5.jpg" alt></p>
-<p><strong>反函数求导法则:</strong></p>
-<p><img src="https://i.loli.net/2019/03/09/5c832dcee82c1.jpg" alt="89789789.jpg"></p>
-<p><strong>画图证明：</strong><img src="https://i.loli.net/2019/03/04/5c7d183483f93.jpg" alt="TIM图片20190304201947.jpg"></p>
-<h3 id="4-幂指函数求导法则："><a href="#4-幂指函数求导法则：" class="headerlink" title="4.幂指函数求导法则："></a>4.<font color="blue">幂指函数</font>求导法则：</h3><p> <img src="https://i.loli.net/2019/03/04/5c7d18f802a2a.jpg" alt="mi.jpg"></p>
-<p> <img src="https://i.loli.net/2019/03/04/5c7d1a3352666.jpg" alt="w.jpg"></p>
-<h3 id="5-隐函数求导法则："><a href="#5-隐函数求导法则：" class="headerlink" title="5.隐函数求导法则："></a>5.隐函数求导法则：</h3><p><img src="https://i.loli.net/2019/03/04/5c7d1bff0f2f1.jpg" alt="1111.jpg"></p>
-<h3 id="6-参数方程求导法则："><a href="#6-参数方程求导法则：" class="headerlink" title="6.参数方程求导法则："></a>6.参数方程求导法则：</h3><p><img src="https://i.loli.net/2019/03/04/5c7d1d07ec2fc.jpg" alt="2222.jpg"></p>
-<h3 id="7-高阶导数求导法则："><a href="#7-高阶导数求导法则：" class="headerlink" title="7.高阶导数求导法则："></a>7.<font color="red">高阶导数</font>求导法则：</h3><p> <img src="https://i.loli.net/2019/03/04/5c7d1e66b3640.jpg" alt="123.jpg"></p>
-<p>[注]：前两条与求一阶导公式一致，但第三条与求一阶导有所不同。</p>
-<p><strong><font color="blue">常见的几个函数的n阶导：</font></strong><img src="https://i.loli.net/2019/03/04/5c7d2076074a0.jpg" alt="321.jpg"></p>
-<hr>
-<h3 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h3><p><img src="https://i.loli.net/2019/03/05/5c7de196cca4a.jpg" alt="lizi 1.jpg"></p>
-<p><img src="https://i.loli.net/2019/03/04/5c7d27466da80.jpg" alt="TIM图片20190304212422.jpg"></p>
-<p>  <img src="https://i.loli.net/2019/03/05/5c7dd884ce5a4.jpg" alt="Snipaste_2019-03-05_10-01-25.jpg"></p>
-<p><img src="https://i.loli.net/2019/03/05/5c7dd9dc8e6e5.jpg" alt="IMG_0562.JPG"></p>
-<p> <img src="https://i.loli.net/2019/03/05/5c7ddcf6e37f8.jpg" alt="3.jpg"></p>
-<p><img src="https://i.loli.net/2019/03/05/5c7de0abb6b4a.jpg" alt="IMG_0563.JPG"></p>
-<p> <img src="https://i.loli.net/2019/03/05/5c7de1c1ec468.jpg" alt="123.jpg"></p>
-<p><img src="https://i.loli.net/2019/03/05/5c7de6d209bc2.png" alt="IMG_0564.JPG"></p>
-<hr>
-<p><img src="https://i.niupic.com/images/2019/01/11/5HFp.png" alt></p>
+        <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>结点的度：结点的子树个数</p>
+<p>树的度：树中各个结点的度的最大值</p>
+<h2 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h2><blockquote>
+<p>定义一个容量足够大的队列，存放结点指针，基于层次遍历的算法思想遍历树中各结点，定义临时变量max，n，max用于记录当前已访问结点度的最大值，n记录当前结点的度：</p>
+<p>·若当前结点p为空，则返回度数为0；</p>
+<p>·否则，将当前结点p入队，n置为0。若p存在孩子结点，访问第一个孩子结点，同时p的度数加一（n++）,将孩子结点入队，继续访问p的剩余孩子结点，每访问一个孩子结点，度数加一。</p>
+</blockquote>
+<h2 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMax</span><span class="params">(Tree T)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(T==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	Node *Q[MaxSize],*p,*q;<span class="comment">//定义一个容量足够大的队列，存放结点指针</span></span><br><span class="line">	<span class="keyword">int</span> front=<span class="number">-1</span>,rear=<span class="number">-1</span>;<span class="comment">//初始化队列为空</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> max=<span class="number">0</span>,n=<span class="number">-1</span>;<span class="comment">//max记录当前已访问结点度的最大值，n记录当前结点的度</span></span><br><span class="line"></span><br><span class="line">	Q[++rear]=T;<span class="comment">//根结点入队</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(front&lt;rear)&#123;</span><br><span class="line">		p=Q[++front];<span class="comment">//队头元素出队</span></span><br><span class="line">		n=<span class="number">0</span>;<span class="comment">//即将开始遍历子树，此时当前结点度为0</span></span><br><span class="line"></span><br><span class="line">		q=p-&gt;firstchild;<span class="comment">//q指向p的第一个孩子</span></span><br><span class="line">		<span class="keyword">while</span>(q!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">			n++;<span class="comment">//度+1</span></span><br><span class="line">			Q[++rear]=q;<span class="comment">//孩子结点入队</span></span><br><span class="line">			q=q-&gt;nextsibling;<span class="comment">//遍历孩子的兄弟结点（即将p所有孩子入队）</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		max=n&gt;max?n:max;<span class="comment">//更新当前已访问结点度的最大值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p><img src="https://i.loli.net/2019/11/05/4NJqSXbyOurIovD.png" alt="pic.png"></p>
 
       
     </div>
@@ -632,11 +578,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/高等数学/" rel="tag"><i class="fa fa-tag"></i> 高等数学</a>
-          
-            <a href="/tags/考研复习/" rel="tag"><i class="fa fa-tag"></i> 考研复习</a>
-          
-            <a href="/tags/高昆轮/" rel="tag"><i class="fa fa-tag"></i> 高昆轮</a>
+            <a href="/tags/二叉树/" rel="tag"><i class="fa fa-tag"></i> 二叉树</a>
           
         </div>
       
@@ -649,8 +591,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/02/阶乘计算/" rel="next" title="阶乘计算">
-                <i class="fa fa-chevron-left"></i> 阶乘计算
+              <a href="/2019/09/09/数据结构：计算二叉树高度/" rel="next" title="计算二叉树深度（高度）">
+                <i class="fa fa-chevron-left"></i> 计算二叉树深度（高度）
               </a>
             
           </div>
@@ -658,10 +600,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/03/06/方格计数/" rel="prev" title="方格计数">
-                方格计数 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -863,7 +801,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-基本求导公式："><span class="nav-number">1.</span> <span class="nav-text">1.基本求导公式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-四则运算法则："><span class="nav-number">2.</span> <span class="nav-text">2.四则运算法则：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复合函数的求导法则"><span class="nav-number">3.</span> <span class="nav-text">复合函数的求导法则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-反函数的求导法则："><span class="nav-number">4.</span> <span class="nav-text">3.反函数的求导法则：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-幂指函数求导法则："><span class="nav-number">5.</span> <span class="nav-text">4.幂指函数求导法则：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-隐函数求导法则："><span class="nav-number">6.</span> <span class="nav-text">5.隐函数求导法则：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-参数方程求导法则："><span class="nav-number">7.</span> <span class="nav-text">6.参数方程求导法则：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-高阶导数求导法则："><span class="nav-number">8.</span> <span class="nav-text">7.高阶导数求导法则：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例题："><span class="nav-number">9.</span> <span class="nav-text">例题：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法思想"><span class="nav-number">2.</span> <span class="nav-text">算法思想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#核心代码"><span class="nav-number">3.</span> <span class="nav-text">核心代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#运行结果"><span class="nav-number">4.</span> <span class="nav-text">运行结果</span></a></li></ol></div>
             
 
           </div>
