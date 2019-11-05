@@ -155,12 +155,13 @@
 <meta property="og:site_name" content="Slash Youth">
 <meta property="og:description" content="写在前面结点的度：结点的子树个数 树的度：树中各个结点的度的最大值 算法思想 定义一个容量足够大的队列，存放结点指针，基于层次遍历的算法思想遍历树中各结点，定义临时变量max，n，max用于记录当前已访问结点度的最大值，n记录当前结点的度： ·若当前结点p为空，则返回度数为0； ·否则，将当前结点p入队，n置为0。若p存在孩子结点，访问第一个孩子结点，同时p的度数加一（n++）,将孩子结点入队，继">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://i.loli.net/2019/11/05/4ZFYeNCjGtJTBvr.jpg">
 <meta property="og:image" content="https://i.loli.net/2019/11/05/4NJqSXbyOurIovD.png">
-<meta property="og:updated_time" content="2019-11-05T13:50:25.103Z">
+<meta property="og:updated_time" content="2019-11-05T13:56:11.981Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="求以“孩子-兄弟链表表示的树”的度">
 <meta name="twitter:description" content="写在前面结点的度：结点的子树个数 树的度：树中各个结点的度的最大值 算法思想 定义一个容量足够大的队列，存放结点指针，基于层次遍历的算法思想遍历树中各结点，定义临时变量max，n，max用于记录当前已访问结点度的最大值，n记录当前结点的度： ·若当前结点p为空，则返回度数为0； ·否则，将当前结点p入队，n置为0。若p存在孩子结点，访问第一个孩子结点，同时p的度数加一（n++）,将孩子结点入队，继">
-<meta name="twitter:image" content="https://i.loli.net/2019/11/05/4NJqSXbyOurIovD.png">
+<meta name="twitter:image" content="https://i.loli.net/2019/11/05/4ZFYeNCjGtJTBvr.jpg">
 
 
 
@@ -473,9 +474,13 @@
                 
               
 
-              <time title="创建时间：2019-11-05 13:50:25" itemprop="dateCreated datePublished" datetime="2019-11-05T13:50:25Z">2019-11-05</time>
+              <time title="创建时间：2019-11-05 13:50:25 / 修改时间：13:56:11" itemprop="dateCreated datePublished" datetime="2019-11-05T13:50:25Z">2019-11-05</time>
             
 
+            
+              
+
+              
             
           </span>
 
@@ -553,7 +558,7 @@
 <p>·若当前结点p为空，则返回度数为0；</p>
 <p>·否则，将当前结点p入队，n置为0。若p存在孩子结点，访问第一个孩子结点，同时p的度数加一（n++）,将孩子结点入队，继续访问p的剩余孩子结点，每访问一个孩子结点，度数加一。</p>
 </blockquote>
-<h2 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getMax</span><span class="params">(Tree T)</span></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(T==<span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	Node *Q[MaxSize],*p,*q;<span class="comment">//定义一个容量足够大的队列，存放结点指针</span></span><br><span class="line">	<span class="keyword">int</span> front=<span class="number">-1</span>,rear=<span class="number">-1</span>;<span class="comment">//初始化队列为空</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> max=<span class="number">0</span>,n=<span class="number">-1</span>;<span class="comment">//max记录当前已访问结点度的最大值，n记录当前结点的度</span></span><br><span class="line"></span><br><span class="line">	Q[++rear]=T;<span class="comment">//根结点入队</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span>(front&lt;rear)&#123;</span><br><span class="line">		p=Q[++front];<span class="comment">//队头元素出队</span></span><br><span class="line">		n=<span class="number">0</span>;<span class="comment">//即将开始遍历子树，此时当前结点度为0</span></span><br><span class="line"></span><br><span class="line">		q=p-&gt;firstchild;<span class="comment">//q指向p的第一个孩子</span></span><br><span class="line">		<span class="keyword">while</span>(q!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">			n++;<span class="comment">//度+1</span></span><br><span class="line">			Q[++rear]=q;<span class="comment">//孩子结点入队</span></span><br><span class="line">			q=q-&gt;nextsibling;<span class="comment">//遍历孩子的兄弟结点（即将p所有孩子入队）</span></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		max=n&gt;max?n:max;<span class="comment">//更新当前已访问结点度的最大值</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="核心代码"><a href="#核心代码" class="headerlink" title="核心代码"></a>核心代码</h2><p> <img src="https://i.loli.net/2019/11/05/4ZFYeNCjGtJTBvr.jpg" alt="pic2.jpg"></p>
 <h2 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h2><p><img src="https://i.loli.net/2019/11/05/4NJqSXbyOurIovD.png" alt="pic.png"></p>
 
       
